@@ -1,0 +1,19 @@
+{
+  "competition": "2026task1",
+  "verified_at": "2026-10-10T19:29:00+08:00",
+  "submission_status": "Complete",
+  "public_score": 0.9153,
+  "previous_best_public_score": 0.8095,
+  "selected_for_final_score": true,
+  "submission_file": "submission_effnet_selected.csv",
+  "submission_sha256": "93f8fcc02419ea7a24932672214938d098b1c0cc9dea7fbea3d27f1b77ae182f",
+  "notebook_version": 5,
+  "script_version_id": 357030244,
+  "notebook_url": "https://www.kaggle.com/code/shabiba2026/2026task1-plant-cnn-baseline?scriptVersionId=357030244",
+  "submissions_url": "https://www.kaggle.com/competitions/2026task1/submissions",
+  "model": "ImageNet-pretrained EfficientNet-B0, five-fold ensemble",
+  "selected_inference": "blend",
+  "oof_macro_f1": 0.9176282565639126,
+  "test_rows": 378,
+  "private_score": null
+}

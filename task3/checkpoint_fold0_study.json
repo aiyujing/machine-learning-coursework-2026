@@ -1,0 +1,144 @@
+{
+  "fold": 0,
+  "validation_rows": 20,
+  "partial_cross_validation": true,
+  "coarse_epoch": 5,
+  "fine_epoch": 45,
+  "options": [
+    {
+      "sigma_original_pixels": null,
+      "fine_weight": 0.0,
+      "validation_rmse": 23.001601570947592
+    },
+    {
+      "sigma_original_pixels": null,
+      "fine_weight": 0.25,
+      "validation_rmse": 20.674592014241327
+    },
+    {
+      "sigma_original_pixels": null,
+      "fine_weight": 0.5,
+      "validation_rmse": 21.505712580718637
+    },
+    {
+      "sigma_original_pixels": null,
+      "fine_weight": 0.75,
+      "validation_rmse": 25.18420994941204
+    },
+    {
+      "sigma_original_pixels": null,
+      "fine_weight": 1.0,
+      "validation_rmse": 30.703176162574533
+    },
+    {
+      "sigma_original_pixels": 20,
+      "fine_weight": 0.0,
+      "validation_rmse": 23.001601570947592
+    },
+    {
+      "sigma_original_pixels": 20,
+      "fine_weight": 0.25,
+      "validation_rmse": 21.02921880926336
+    },
+    {
+      "sigma_original_pixels": 20,
+      "fine_weight": 0.5,
+      "validation_rmse": 19.3909563927405
+    },
+    {
+      "sigma_original_pixels": 20,
+      "fine_weight": 0.75,
+      "validation_rmse": 18.17737915983715
+    },
+    {
+      "sigma_original_pixels": 20,
+      "fine_weight": 1.0,
+      "validation_rmse": 17.47717979577458
+    },
+    {
+      "sigma_original_pixels": 40,
+      "fine_weight": 0.0,
+      "validation_rmse": 23.001601570947592
+    },
+    {
+      "sigma_original_pixels": 40,
+      "fine_weight": 0.25,
+      "validation_rmse": 20.597309735370793
+    },
+    {
+      "sigma_original_pixels": 40,
+      "fine_weight": 0.5,
+      "validation_rmse": 18.84543736366255
+    },
+    {
+      "sigma_original_pixels": 40,
+      "fine_weight": 0.75,
+      "validation_rmse": 17.938163175403517
+    },
+    {
+      "sigma_original_pixels": 40,
+      "fine_weight": 1.0,
+      "validation_rmse": 18.003631144128214
+    },
+    {
+      "sigma_original_pixels": 80,
+      "fine_weight": 0.0,
+      "validation_rmse": 23.001601570947592
+    },
+    {
+      "sigma_original_pixels": 80,
+      "fine_weight": 0.25,
+      "validation_rmse": 20.687311499692658
+    },
+    {
+      "sigma_original_pixels": 80,
+      "fine_weight": 0.5,
+      "validation_rmse": 21.474698700743986
+    },
+    {
+      "sigma_original_pixels": 80,
+      "fine_weight": 0.75,
+      "validation_rmse": 25.07323585889696
+    },
+    {
+      "sigma_original_pixels": 80,
+      "fine_weight": 1.0,
+      "validation_rmse": 30.503741959466865
+    },
+    {
+      "sigma_original_pixels": 160,
+      "fine_weight": 0.0,
+      "validation_rmse": 23.001601570947592
+    },
+    {
+      "sigma_original_pixels": 160,
+      "fine_weight": 0.25,
+      "validation_rmse": 20.67753232236584
+    },
+    {
+      "sigma_original_pixels": 160,
+      "fine_weight": 0.5,
+      "validation_rmse": 21.497672985485195
+    },
+    {
+      "sigma_original_pixels": 160,
+      "fine_weight": 0.75,
+      "validation_rmse": 25.156360574887362
+    },
+    {
+      "sigma_original_pixels": 160,
+      "fine_weight": 1.0,
+      "validation_rmse": 30.653514377492606
+    }
+  ],
+  "selected": {
+    "sigma_original_pixels": 20,
+    "fine_weight": 1.0,
+    "validation_rmse": 17.47717979577458
+  },
+  "filename": "submission_task3_checkpoint_fold0.csv",
+  "sha256": "13b0cc4e052e55072dc72f2226c02ca651375a0d0d50a0dc57db9935d317753e",
+  "public_score": 18.62723,
+  "external_test_labels_used": false,
+  "kaggle_status": "Complete"
+}

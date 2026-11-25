@@ -1,0 +1,109 @@
+{
+  "all_20_training_masks_roundtrip": true,
+  "encoding_matches_official_algorithm": true,
+  "empty_full_diagonal_masks_checked": true,
+  "order": "row-major",
+  "indexing": "1-based",
+  "results": [
+    {
+      "label": "1.jpg",
+      "foreground_pixels": 33840,
+      "rle_pairs": 4637
+    },
+    {
+      "label": "10.jpg",
+      "foreground_pixels": 32238,
+      "rle_pairs": 4573
+    },
+    {
+      "label": "11.jpg",
+      "foreground_pixels": 29447,
+      "rle_pairs": 4134
+    },
+    {
+      "label": "12.jpg",
+      "foreground_pixels": 37660,
+      "rle_pairs": 4666
+    },
+    {
+      "label": "13.jpg",
+      "foreground_pixels": 35711,
+      "rle_pairs": 5111
+    },
+    {
+      "label": "14.jpg",
+      "foreground_pixels": 33737,
+      "rle_pairs": 4613
+    },
+    {
+      "label": "15.jpg",
+      "foreground_pixels": 33606,
+      "rle_pairs": 4926
+    },
+    {
+      "label": "16.jpg",
+      "foreground_pixels": 33819,
+      "rle_pairs": 4987
+    },
+    {
+      "label": "17.jpg",
+      "foreground_pixels": 36042,
+      "rle_pairs": 5379
+    },
+    {
+      "label": "18.jpg",
+      "foreground_pixels": 33656,
+      "rle_pairs": 5010
+    },
+    {
+      "label": "19.jpg",
+      "foreground_pixels": 36474,
+      "rle_pairs": 4799
+    },
+    {
+      "label": "2.jpg",
+      "foreground_pixels": 31815,
+      "rle_pairs": 4028
+    },
+    {
+      "label": "20.jpg",
+      "foreground_pixels": 38192,
+      "rle_pairs": 5187
+    },
+    {
+      "label": "3.jpg",
+      "foreground_pixels": 41227,
+      "rle_pairs": 5819
+    },
+    {
+      "label": "4.jpg",
+      "foreground_pixels": 30044,
+      "rle_pairs": 4402
+    },
+    {
+      "label": "5.jpg",
+      "foreground_pixels": 24593,
+      "rle_pairs": 2739
+    },
+    {
+      "label": "6.jpg",
+      "foreground_pixels": 44297,
+      "rle_pairs": 5822
+    },
+    {
+      "label": "7.jpg",
+      "foreground_pixels": 24357,
+      "rle_pairs": 3292
+    },
+    {
+      "label": "8.jpg",
+      "foreground_pixels": 31711,
+      "rle_pairs": 4231
+    },
+    {
+      "label": "9.jpg",
+      "foreground_pixels": 32147,
+      "rle_pairs": 4769
+    }
+  ]
+}

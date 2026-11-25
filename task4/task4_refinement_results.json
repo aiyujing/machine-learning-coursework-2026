@@ -1,0 +1,4431 @@
+{
+  "competition": "2026task-4",
+  "operation": "inference only, no new training",
+  "models_reused_from_version_id": 364133019,
+  "model_hashes": {
+    "resnet34_rgb_fold0": "b9d7a0ddf3d10dfcc5a1b97dbd1caf06ca5954f5bba4bfa9c95c66538e313269",
+    "resnet34_rgb_fold1": "b54fb9e14e02da5f6022aaf9a0b48ecab1ced20d5f9ad5d57dae6efc0d98f896",
+    "resnet34_rgb_fold2": "0f163375d70c7e7d457f225f09310de6117eaf8baa871e13d152dc2257a008c7",
+    "resnet34_rgb_fold3": "9d29b18024eb27bc1535059600cf0666dddb11d67deb44aa2aad2766016ede50",
+    "resnet34_rgb_full": "b1b2eeb72c3dc4aad8d53624d5df4c31769535be570ace1f2e069fc4bccc325b",
+    "efficientnet_b2_clahe_fold0": "595bb73f345c23a832b973cc5d0fbf74d436a97d0b10a762644cc6aa1c73370a",
+    "efficientnet_b2_clahe_fold1": "c0647367fa2576fd7c8d316f5d9bef1d8de2b6ba9f01ba8af30dc3024499f558",
+    "efficientnet_b2_clahe_fold2": "63daf80605beb1dfee6cadf2a30df7e7074f298c06c1be4430579a2cf0921360",
+    "efficientnet_b2_clahe_fold3": "23d8a8468d49a1412660b9d200436615d37ff3b2967d28ad901284f0dffcb5f7",
+    "efficientnet_b2_clahe_full": "bb58a0a540bfe4d43edf23121f7216ffb08c8c1d52ee44ffacf8ab6615effd43"
+  },
+  "baseline_selection": {
+    "mode": "base_tta4",
+    "second_architecture_weight": 0.5,
+    "threshold": 0.4,
+    "minimum_component_pixels": 24,
+    "oof_mean_dice": 0.8337685636310171,
+    "oof_std_dice": 0.03227114635463736
+  },
+  "selected": {
+    "mode": "multiscale_d4",
+    "second_architecture_weight": 0.5,
+    "threshold": 0.35,
+    "minimum_component_pixels": 24,
+    "oof_mean_dice": 0.8377836025877174,
+    "oof_std_dice": 0.032216221411985914
+  },
+  "oof_mean_improvement": 0.004015038956700301,
+  "paired_images_improved": 20,
+  "paired_images_total": 20,
+  "paired_oof_dice_before": [
+    0.8545288197623305,
+    0.8376737624628102,
+    0.8644281111560305,
+    0.8439968343138002,
+    0.7940774060541766,
+    0.843881754593856,
+    0.8255854169637141,
+    0.8223969502028077,
+    0.8523650857910311,
+    0.8431754076355745,
+    0.8601674778364549,
+    0.7173160824436328,
+    0.8486717739530556,
+    0.8659045018087627,
+    0.8456713381557334,
+    0.8252010399664048,
+    0.8241348816308962,
+    0.8492663019885831,
+    0.8071080713863379,
+    0.8498202545143457
+  ],
+  "paired_oof_dice_after": [
+    0.8553446694421007,
+    0.8420721047080026,
+    0.8697861528691014,
+    0.8463847963355108,
+    0.8029767863555088,
+    0.8480247570235385,
+    0.8298746744795128,
+    0.8254498875283907,
+    0.8556729699668526,
+    0.8443658489069726,
+    0.861614121938735,
+    0.7186753364589162,
+    0.8537916520521167,
+    0.868002704685914,
+    0.8486283797120745,
+    0.8314556173962534,
+    0.8315443905226498,
+    0.8533649383846391,
+    0.8113985522741953,
+    0.8572437107133644
+  ],
+  "selection_options": [
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261117085549774,
+      "oof_std_dice": 0.03412396702996911
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8264645417214698,
+      "oof_std_dice": 0.0344112017135096
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8270123502540161,
+      "oof_std_dice": 0.03454006287553466
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.828007546479817,
+      "oof_std_dice": 0.03535442269610788
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8283647432081717,
+      "oof_std_dice": 0.035514399714369815
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8288230764623327,
+      "oof_std_dice": 0.035875338910458986
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8290125901921994,
+      "oof_std_dice": 0.036601186925440385
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8292203089666066,
+      "oof_std_dice": 0.03678302964576115
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8293330828627864,
+      "oof_std_dice": 0.03695558558568287
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8289065231826539,
+      "oof_std_dice": 0.03778501125525755
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8291227322775825,
+      "oof_std_dice": 0.03789236086990786
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8289469556855977,
+      "oof_std_dice": 0.038225733805248456
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8279761967181862,
+      "oof_std_dice": 0.03906030865252038
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8280196814046498,
+      "oof_std_dice": 0.039273212580256324
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8278654656609896,
+      "oof_std_dice": 0.0394839688204868
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261406857767766,
+      "oof_std_dice": 0.04070709478278748
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8261062349415965,
+      "oof_std_dice": 0.04090838613620176
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8257686750434907,
+      "oof_std_dice": 0.041131520793643433
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8234457354594221,
+      "oof_std_dice": 0.0422635197285312
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8233434227329124,
+      "oof_std_dice": 0.04245591515133085
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8227534934161129,
+      "oof_std_dice": 0.04282044937798477
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8195501306180148,
+      "oof_std_dice": 0.04398189215813803
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8192767017253677,
+      "oof_std_dice": 0.04412004885374084
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.818346840471073,
+      "oof_std_dice": 0.0448328699804457
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8147263141416033,
+      "oof_std_dice": 0.045966840211322434
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8144753561284123,
+      "oof_std_dice": 0.04612846072025119
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.813366032900708,
+      "oof_std_dice": 0.04676833821131756
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8294418009176916,
+      "oof_std_dice": 0.03208461752242686
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8297134552542118,
+      "oof_std_dice": 0.0322483878861686
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8301994285375326,
+      "oof_std_dice": 0.032569980591035254
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8311279860220109,
+      "oof_std_dice": 0.033469305228073724
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8312964529149562,
+      "oof_std_dice": 0.033767940237142906
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316149792936747,
+      "oof_std_dice": 0.034100701417762426
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8318180681883721,
+      "oof_std_dice": 0.03500704828188597
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.831914416311222,
+      "oof_std_dice": 0.03527703303567125
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8319399690017034,
+      "oof_std_dice": 0.03545401881162351
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8315116041680627,
+      "oof_std_dice": 0.03659538654881834
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8316008527848009,
+      "oof_std_dice": 0.036754449489964904
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8315049478984085,
+      "oof_std_dice": 0.03696120836427299
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8304968468920053,
+      "oof_std_dice": 0.037987442574133036
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8304555821508689,
+      "oof_std_dice": 0.03810475052410167
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8300935837743092,
+      "oof_std_dice": 0.03846087750333736
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8283093555964633,
+      "oof_std_dice": 0.03966955999787301
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8282244592166116,
+      "oof_std_dice": 0.039752619205168004
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8278307283088802,
+      "oof_std_dice": 0.04000963865593489
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8254141253725009,
+      "oof_std_dice": 0.041402260630027866
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.825273705234334,
+      "oof_std_dice": 0.041555858568934956
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8246153171034744,
+      "oof_std_dice": 0.04169122061544553
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8210947425406949,
+      "oof_std_dice": 0.043533065951634496
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.82082243896597,
+      "oof_std_dice": 0.04367350247358526
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8200556288966302,
+      "oof_std_dice": 0.04424208389449877
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8156950827956304,
+      "oof_std_dice": 0.045522843159689845
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8153122633828126,
+      "oof_std_dice": 0.04573046950848605
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8143023990386868,
+      "oof_std_dice": 0.04618863995345833
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.831346486029469,
+      "oof_std_dice": 0.029304211628254088
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8315186835501776,
+      "oof_std_dice": 0.029429612880736956
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8319599754194542,
+      "oof_std_dice": 0.029726146573818214
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331528922989172,
+      "oof_std_dice": 0.030473772112800675
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8332490464138376,
+      "oof_std_dice": 0.030658764531382634
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8335047831851728,
+      "oof_std_dice": 0.030976555201239042
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8336591499261224,
+      "oof_std_dice": 0.031748112454803516
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8337449390648976,
+      "oof_std_dice": 0.03188033943965164
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8337685636310171,
+      "oof_std_dice": 0.03227114635463736
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8333940268633974,
+      "oof_std_dice": 0.03323902460867746
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8334399191701326,
+      "oof_std_dice": 0.033439928096250376
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8332875935765719,
+      "oof_std_dice": 0.03362737645164096
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8319699675334988,
+      "oof_std_dice": 0.03548310655057818
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8319758061279513,
+      "oof_std_dice": 0.03571537355564195
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316673061370692,
+      "oof_std_dice": 0.03601913376657711
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8297623817227832,
+      "oof_std_dice": 0.03777355492517924
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8297032064171918,
+      "oof_std_dice": 0.03794206476079715
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8292795302360364,
+      "oof_std_dice": 0.038309758779325936
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8265084033387933,
+      "oof_std_dice": 0.039906822194637696
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8263046806343477,
+      "oof_std_dice": 0.04006414593995947
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8258006723779164,
+      "oof_std_dice": 0.04032229168530857
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8220575053860502,
+      "oof_std_dice": 0.04219820354966446
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8218708687108865,
+      "oof_std_dice": 0.0423381976632965
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8210014804300144,
+      "oof_std_dice": 0.04248738202327275
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8164072644428086,
+      "oof_std_dice": 0.04442249105673245
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8160602039385951,
+      "oof_std_dice": 0.04460844302400376
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8151289931113703,
+      "oof_std_dice": 0.04477907724632792
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8306181062189332,
+      "oof_std_dice": 0.02848664509974209
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308617384140075,
+      "oof_std_dice": 0.028508309169593828
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8311696330854094,
+      "oof_std_dice": 0.028630449315388974
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.832566264204506,
+      "oof_std_dice": 0.029263260478840397
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8327253642842342,
+      "oof_std_dice": 0.029378757430292522
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8329226593931558,
+      "oof_std_dice": 0.029619029394734354
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8332662929744737,
+      "oof_std_dice": 0.030204727374802242
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8333460539745217,
+      "oof_std_dice": 0.03035071283401263
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8335655098813023,
+      "oof_std_dice": 0.030595712695123387
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331272266872525,
+      "oof_std_dice": 0.03139776980757805
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8331930552512254,
+      "oof_std_dice": 0.03151433115802465
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.83317989557554,
+      "oof_std_dice": 0.031816823853107364
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8321325587091412,
+      "oof_std_dice": 0.032751462471363714
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8322204684841186,
+      "oof_std_dice": 0.03287189704819112
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8320755177797678,
+      "oof_std_dice": 0.033132568510033024
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8299709222553414,
+      "oof_std_dice": 0.034450447470208825
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8299396861188354,
+      "oof_std_dice": 0.034638300386758886
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8295345446449677,
+      "oof_std_dice": 0.03512180097786004
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8269219312065654,
+      "oof_std_dice": 0.03635051313387204
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8267397002358748,
+      "oof_std_dice": 0.03658040457026074
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8262133220911074,
+      "oof_std_dice": 0.03676473440855165
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8230103829171627,
+      "oof_std_dice": 0.038327311296191116
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8226851860911875,
+      "oof_std_dice": 0.03863226140275742
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8219367590630482,
+      "oof_std_dice": 0.038816675431703924
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8174454683113905,
+      "oof_std_dice": 0.04075446907645274
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8171047682452877,
+      "oof_std_dice": 0.04086866191790334
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8162284520148868,
+      "oof_std_dice": 0.04123133590878143
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8286702910965079,
+      "oof_std_dice": 0.028102372272259195
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8290290167066457,
+      "oof_std_dice": 0.02807930407394272
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8296119727030984,
+      "oof_std_dice": 0.02813733100170725
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8305946153293611,
+      "oof_std_dice": 0.028671886686771668
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308991754859871,
+      "oof_std_dice": 0.028713295043873644
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.831261416580572,
+      "oof_std_dice": 0.028812825803899596
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8314564504515923,
+      "oof_std_dice": 0.029547384300701262
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8316574462548803,
+      "oof_std_dice": 0.029671732588799845
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8318441599957117,
+      "oof_std_dice": 0.029899631361414183
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8316074811700723,
+      "oof_std_dice": 0.030573086962512836
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8317116640592396,
+      "oof_std_dice": 0.030713820400847094
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316620839153627,
+      "oof_std_dice": 0.030865885697239713
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8305734290704159,
+      "oof_std_dice": 0.03168721245954258
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8306298621942974,
+      "oof_std_dice": 0.03181280514356715
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8304547223780065,
+      "oof_std_dice": 0.03202526870617448
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8287696493710568,
+      "oof_std_dice": 0.033075898513552235
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8287367319321272,
+      "oof_std_dice": 0.03324124857537687
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8284759397783409,
+      "oof_std_dice": 0.033320908094517675
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261182420423914,
+      "oof_std_dice": 0.03450322323064686
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8259917236784954,
+      "oof_std_dice": 0.0346430076703785
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8256571597203102,
+      "oof_std_dice": 0.03484134069612403
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8223596300555197,
+      "oof_std_dice": 0.0362749536306844
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8221472460655479,
+      "oof_std_dice": 0.03645077996504228
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8216212841215134,
+      "oof_std_dice": 0.036627482412056905
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8173419146642699,
+      "oof_std_dice": 0.0381963418583779
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8170977201220957,
+      "oof_std_dice": 0.038344180095478374
+    },
+    {
+      "mode": "base_tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8161862414549728,
+      "oof_std_dice": 0.03861416569860619
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8272614274204502,
+      "oof_std_dice": 0.03368594098759397
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8275203819926885,
+      "oof_std_dice": 0.033991351052537665
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8279137011030114,
+      "oof_std_dice": 0.0340630087001507
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.829100151425609,
+      "oof_std_dice": 0.03490516466461202
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8292894971451144,
+      "oof_std_dice": 0.03514717715633077
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8294712299504793,
+      "oof_std_dice": 0.03516751351645649
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8299759911724397,
+      "oof_std_dice": 0.03632501802768137
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8301536851277884,
+      "oof_std_dice": 0.036498768428212355
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8301494681676435,
+      "oof_std_dice": 0.036798954528356506
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8296906088423714,
+      "oof_std_dice": 0.03795604483416816
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8297898422135545,
+      "oof_std_dice": 0.03816852353163399
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8297642368703982,
+      "oof_std_dice": 0.038357388926500764
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8287010164696682,
+      "oof_std_dice": 0.03947472976144474
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8287299144239165,
+      "oof_std_dice": 0.03957325927028044
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8286902171589565,
+      "oof_std_dice": 0.039835569304048656
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8268837420514019,
+      "oof_std_dice": 0.04116286427546231
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8267795114378874,
+      "oof_std_dice": 0.04131003279218787
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8265079576624872,
+      "oof_std_dice": 0.04195351600589555
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8241303572282117,
+      "oof_std_dice": 0.042952762773325534
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8240328008488313,
+      "oof_std_dice": 0.04315344014303815
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8233379252596922,
+      "oof_std_dice": 0.04378592357287326
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8202346537045548,
+      "oof_std_dice": 0.04482554825129423
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8199876976922258,
+      "oof_std_dice": 0.044989657533152656
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8191176243527469,
+      "oof_std_dice": 0.045716249297917746
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8149481706699928,
+      "oof_std_dice": 0.04702358878247213
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8147126822939356,
+      "oof_std_dice": 0.047225022701831536
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8135963901815151,
+      "oof_std_dice": 0.04770679402942327
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8301810509924769,
+      "oof_std_dice": 0.03155696485389514
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8304530927742106,
+      "oof_std_dice": 0.0317126292972214
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8307978978233926,
+      "oof_std_dice": 0.03174019867035437
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.831904547790192,
+      "oof_std_dice": 0.033160519620284955
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8320688067025717,
+      "oof_std_dice": 0.03333282647065973
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8322711059604337,
+      "oof_std_dice": 0.033469948128998527
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8325237392143029,
+      "oof_std_dice": 0.03468577503299833
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8326395493204096,
+      "oof_std_dice": 0.03481700682517181
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.832703230916722,
+      "oof_std_dice": 0.03515153284068086
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8322909925182751,
+      "oof_std_dice": 0.03628429722316147
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8323413988224351,
+      "oof_std_dice": 0.036389007737682076
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8321010430839408,
+      "oof_std_dice": 0.036911231073789685
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8310138599168475,
+      "oof_std_dice": 0.03813486059591249
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8309735519761097,
+      "oof_std_dice": 0.03827861106288639
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8306880727409608,
+      "oof_std_dice": 0.03852301892534444
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8289225780962892,
+      "oof_std_dice": 0.039831253712375884
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8287512415814999,
+      "oof_std_dice": 0.04000899510957412
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8283689110922674,
+      "oof_std_dice": 0.040253059847361695
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8257719571287744,
+      "oof_std_dice": 0.04173243982109324
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8256352560123684,
+      "oof_std_dice": 0.04190860594543835
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8251530656650272,
+      "oof_std_dice": 0.04217111987679796
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8216007536330674,
+      "oof_std_dice": 0.04398116455654721
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8214203982032734,
+      "oof_std_dice": 0.044126153311123
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8205497166749114,
+      "oof_std_dice": 0.044789516826547866
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8159238055173708,
+      "oof_std_dice": 0.0460396944622639
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8155917985448025,
+      "oof_std_dice": 0.046264341900514844
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8146977035128506,
+      "oof_std_dice": 0.04670094790608484
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8318638516294262,
+      "oof_std_dice": 0.029252780585278533
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8320750472318833,
+      "oof_std_dice": 0.029305816652917854
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8324710528275527,
+      "oof_std_dice": 0.02955405003087457
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8336194009736191,
+      "oof_std_dice": 0.030340058568817312
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8337379279459414,
+      "oof_std_dice": 0.03057915660626291
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8338617010124268,
+      "oof_std_dice": 0.030659239290227836
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8343324784202778,
+      "oof_std_dice": 0.031671065321292026
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8344687238309163,
+      "oof_std_dice": 0.03178892501213809
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.834289263929716,
+      "oof_std_dice": 0.031818822955509696
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8339010551950249,
+      "oof_std_dice": 0.0332998401282944
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8338884384659092,
+      "oof_std_dice": 0.03338269812763492
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8337951339354672,
+      "oof_std_dice": 0.03366639595178884
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.832609501792507,
+      "oof_std_dice": 0.0353208437120633
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8325525044473702,
+      "oof_std_dice": 0.0354733364564346
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8322863129435577,
+      "oof_std_dice": 0.03556567389857521
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8302596504156702,
+      "oof_std_dice": 0.037639094552259084
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8300968173866752,
+      "oof_std_dice": 0.03775977738074295
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8297075341390127,
+      "oof_std_dice": 0.03811722660635774
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8270094306106304,
+      "oof_std_dice": 0.03995276868907184
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8268309897975673,
+      "oof_std_dice": 0.040103445419163206
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8262727176122656,
+      "oof_std_dice": 0.04044565491969485
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.822271874367134,
+      "oof_std_dice": 0.04227093234261368
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8220052696676536,
+      "oof_std_dice": 0.04248370834506628
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8213164627620575,
+      "oof_std_dice": 0.042586218259527284
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.816557254939716,
+      "oof_std_dice": 0.04461081997847199
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.816231125591447,
+      "oof_std_dice": 0.04482491144903737
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8153406934367379,
+      "oof_std_dice": 0.045171625204158294
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.831681178975481,
+      "oof_std_dice": 0.028374191502181748
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8318593867444978,
+      "oof_std_dice": 0.02838414002428108
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.832392036063531,
+      "oof_std_dice": 0.028264705262227692
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8333663057618768,
+      "oof_std_dice": 0.02915198313488018
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.833571821225432,
+      "oof_std_dice": 0.02918836341642514
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8337780358386834,
+      "oof_std_dice": 0.029297957235422202
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8341176165487628,
+      "oof_std_dice": 0.030134155229827365
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.83426250098384,
+      "oof_std_dice": 0.030211966365721415
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.83430613759864,
+      "oof_std_dice": 0.03054734073738291
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8337663548428704,
+      "oof_std_dice": 0.031473569865714854
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8338538613962209,
+      "oof_std_dice": 0.031570975607833326
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8337605075953158,
+      "oof_std_dice": 0.03166967958268611
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.832732426485568,
+      "oof_std_dice": 0.032815926520620105
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8327400489927335,
+      "oof_std_dice": 0.0330061115101401
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8324513586682153,
+      "oof_std_dice": 0.03312519193788538
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.830526574229229,
+      "oof_std_dice": 0.034351601656833604
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8304093706812232,
+      "oof_std_dice": 0.034431383075552414
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8299392553180311,
+      "oof_std_dice": 0.034513437961893836
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8275088171733447,
+      "oof_std_dice": 0.036412474597563214
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8273537831592049,
+      "oof_std_dice": 0.036551505788343625
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8269049294157493,
+      "oof_std_dice": 0.03672114744927909
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8231830659975816,
+      "oof_std_dice": 0.03870820432092791
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8229668543715697,
+      "oof_std_dice": 0.0388326165525418
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8221933155253056,
+      "oof_std_dice": 0.03915021722915096
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8174662909564147,
+      "oof_std_dice": 0.0413214799707934
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8171399290761452,
+      "oof_std_dice": 0.041558586915341214
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8163038665413789,
+      "oof_std_dice": 0.04173573041544033
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.830094341820028,
+      "oof_std_dice": 0.02795919571073964
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.830324814495613,
+      "oof_std_dice": 0.027936065280464557
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8307270601656664,
+      "oof_std_dice": 0.027996338786083787
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8317727961172855,
+      "oof_std_dice": 0.028611231387717803
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8319621757422879,
+      "oof_std_dice": 0.028664256457892705
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8323560785190262,
+      "oof_std_dice": 0.028567465772227154
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8325391682092869,
+      "oof_std_dice": 0.02940212686409205
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8326780706866603,
+      "oof_std_dice": 0.029483491467466514
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8328596695904757,
+      "oof_std_dice": 0.02947805620543849
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8324179336829207,
+      "oof_std_dice": 0.030606835742393174
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8324751132067612,
+      "oof_std_dice": 0.03071759549394423
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8325204869823205,
+      "oof_std_dice": 0.030810334277403893
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8313688816677759,
+      "oof_std_dice": 0.03167447437688957
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8314161484538971,
+      "oof_std_dice": 0.03169408317968202
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8312596164353792,
+      "oof_std_dice": 0.03173795156410485
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8293298121634493,
+      "oof_std_dice": 0.03307839953903737
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8293576853430012,
+      "oof_std_dice": 0.03308468600004997
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8290463510739882,
+      "oof_std_dice": 0.033327182158395995
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8267523969703955,
+      "oof_std_dice": 0.03466153428450936
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8266704115025438,
+      "oof_std_dice": 0.03471589156014366
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8262206486359791,
+      "oof_std_dice": 0.03487557769142552
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8229495504077116,
+      "oof_std_dice": 0.036392791879360446
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8227649701271391,
+      "oof_std_dice": 0.03650439849663026
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8220974022755432,
+      "oof_std_dice": 0.03683721611607497
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8178826854420274,
+      "oof_std_dice": 0.03835144115367056
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8175954698369055,
+      "oof_std_dice": 0.03843851025692035
+    },
+    {
+      "mode": "d4_512",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8168234972172594,
+      "oof_std_dice": 0.03858247502650178
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8297879035971955,
+      "oof_std_dice": 0.03537855807008196
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8304552401833714,
+      "oof_std_dice": 0.03542191853696592
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8315382660234223,
+      "oof_std_dice": 0.03555511319749738
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8313243265943215,
+      "oof_std_dice": 0.03701034365600934
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8318756159670695,
+      "oof_std_dice": 0.037124293293091776
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8325842141480194,
+      "oof_std_dice": 0.03738857257851459
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8314611645719024,
+      "oof_std_dice": 0.03856374222308344
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8319351776683863,
+      "oof_std_dice": 0.038740659158820995
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8323950949952981,
+      "oof_std_dice": 0.03908618215602761
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8305108753946993,
+      "oof_std_dice": 0.040081386858050246
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308822804386515,
+      "oof_std_dice": 0.040250691556032094
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8311703215965294,
+      "oof_std_dice": 0.040822414707222206
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8282645864931244,
+      "oof_std_dice": 0.04183706979206218
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8284630194684764,
+      "oof_std_dice": 0.042091930369902573
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.828612969147763,
+      "oof_std_dice": 0.042802786493549794
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.825011694411619,
+      "oof_std_dice": 0.04385710224523833
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8252219422283966,
+      "oof_std_dice": 0.04397601058514113
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8250837800046729,
+      "oof_std_dice": 0.044709287059151614
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8206271275835422,
+      "oof_std_dice": 0.045733629772191
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8207373768886932,
+      "oof_std_dice": 0.04590070437085879
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8204520819834817,
+      "oof_std_dice": 0.04638734819344208
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8147150139508647,
+      "oof_std_dice": 0.047776143988467544
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8147252588059046,
+      "oof_std_dice": 0.04805022707697675
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8142196187676083,
+      "oof_std_dice": 0.048581503638055266
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8071262115427107,
+      "oof_std_dice": 0.049873374867234824
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8069889773732914,
+      "oof_std_dice": 0.05016244419191625
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8062532222840029,
+      "oof_std_dice": 0.05088946302869021
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331243134830204,
+      "oof_std_dice": 0.034430045063967095
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8337437678240963,
+      "oof_std_dice": 0.03455458128153272
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8345429633505017,
+      "oof_std_dice": 0.034496200807564256
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8341467363031464,
+      "oof_std_dice": 0.036249853903442514
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8346159271453036,
+      "oof_std_dice": 0.03634812905214472
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8352183840586218,
+      "oof_std_dice": 0.036486998888219775
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8336278435928207,
+      "oof_std_dice": 0.038021785679191296
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.83395257481235,
+      "oof_std_dice": 0.038088306943657106
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.834416490291819,
+      "oof_std_dice": 0.03844854701281706
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8319904752663975,
+      "oof_std_dice": 0.04003921262625932
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8322105809427753,
+      "oof_std_dice": 0.040188631100997116
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8324007022236553,
+      "oof_std_dice": 0.04064166338203514
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8291745472591767,
+      "oof_std_dice": 0.04199537452889787
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8293609622842213,
+      "oof_std_dice": 0.04220288508553569
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8292912120300244,
+      "oof_std_dice": 0.04261700703264772
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8253032431370185,
+      "oof_std_dice": 0.04418906129095673
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8253825460315788,
+      "oof_std_dice": 0.04440413214903491
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8250596440019041,
+      "oof_std_dice": 0.044864168755521246
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8200760048045831,
+      "oof_std_dice": 0.0464286177307424
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8200947178807063,
+      "oof_std_dice": 0.046659288237145775
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8195896661619677,
+      "oof_std_dice": 0.04760867932832435
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8134652811457606,
+      "oof_std_dice": 0.048457301022784526
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8133179066246546,
+      "oof_std_dice": 0.04874570048970838
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8127844851074306,
+      "oof_std_dice": 0.04937117758429139
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8046825313808244,
+      "oof_std_dice": 0.05088303303284416
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8044163224385944,
+      "oof_std_dice": 0.05121171805436574
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8035234805580952,
+      "oof_std_dice": 0.05222980041260161
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8350295582090466,
+      "oof_std_dice": 0.032784630271198385
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8355223149278859,
+      "oof_std_dice": 0.03291087948923489
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8364706282199735,
+      "oof_std_dice": 0.03299697187303522
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.835767610840568,
+      "oof_std_dice": 0.034645145709429455
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8361717866923228,
+      "oof_std_dice": 0.03470565507677577
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8367107576584074,
+      "oof_std_dice": 0.0350075168626076
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8346161477266827,
+      "oof_std_dice": 0.03681564170154815
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8348800136466386,
+      "oof_std_dice": 0.03697505469231273
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8351803149685108,
+      "oof_std_dice": 0.03712386012831828
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8322565585019979,
+      "oof_std_dice": 0.039281087618754006
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8324448779556894,
+      "oof_std_dice": 0.03945672807569459
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8324872316217956,
+      "oof_std_dice": 0.03972959241413076
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8288576951384904,
+      "oof_std_dice": 0.0418535243942295
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8290176213548038,
+      "oof_std_dice": 0.04205478582803801
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8288249269459639,
+      "oof_std_dice": 0.042598863488116014
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8243285870599137,
+      "oof_std_dice": 0.04411117972995468
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8244521863183083,
+      "oof_std_dice": 0.04426577932072024
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8240189226155374,
+      "oof_std_dice": 0.04524305777424962
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8182748132848477,
+      "oof_std_dice": 0.046748896778600876
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8182007170488163,
+      "oof_std_dice": 0.04705620320607222
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8175814500598027,
+      "oof_std_dice": 0.04810243123817812
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8108714109464851,
+      "oof_std_dice": 0.04932135599809116
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8106779390608635,
+      "oof_std_dice": 0.04957005620889417
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8097637140180701,
+      "oof_std_dice": 0.050742778075704785
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8016749139446047,
+      "oof_std_dice": 0.05171614845539697
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8013485571360441,
+      "oof_std_dice": 0.05207253517468647
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8004600953601673,
+      "oof_std_dice": 0.053051838005678656
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8347101368796837,
+      "oof_std_dice": 0.03218550699236768
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8352981042484149,
+      "oof_std_dice": 0.03219928105777374
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8363057599769856,
+      "oof_std_dice": 0.03225384045026806
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.834711073837533,
+      "oof_std_dice": 0.03404981271046936
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8351838202853632,
+      "oof_std_dice": 0.03410629338073657
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8357855883515176,
+      "oof_std_dice": 0.034536458812810644
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331979436897605,
+      "oof_std_dice": 0.03639292849765269
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8335913058171285,
+      "oof_std_dice": 0.036471742296217635
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8338387227896629,
+      "oof_std_dice": 0.03712515045954793
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8304610468610178,
+      "oof_std_dice": 0.0387974218249476
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8307111135548533,
+      "oof_std_dice": 0.03899223608909147
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8308524606077269,
+      "oof_std_dice": 0.03949289252169422
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8267191281489692,
+      "oof_std_dice": 0.04116997861038315
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8269094040001876,
+      "oof_std_dice": 0.04141315260348069
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.826809836940401,
+      "oof_std_dice": 0.04220196912152377
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8220227680094212,
+      "oof_std_dice": 0.043876880771472344
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8221258202960001,
+      "oof_std_dice": 0.044131343152992476
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8218147431198487,
+      "oof_std_dice": 0.044839387432137334
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8161008660259494,
+      "oof_std_dice": 0.046038063324394994
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8161010604144148,
+      "oof_std_dice": 0.0463675722377656
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8156279610511987,
+      "oof_std_dice": 0.04695434940082988
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.808582184950653,
+      "oof_std_dice": 0.04841726459173306
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8085225566065247,
+      "oof_std_dice": 0.048659781646584695
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8076974654928964,
+      "oof_std_dice": 0.04971087370063624
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.7990628382725844,
+      "oof_std_dice": 0.0508138597118799
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.7988104677163,
+      "oof_std_dice": 0.05107142008269269
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.7980141614490334,
+      "oof_std_dice": 0.05181191199951951
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8322626033278452,
+      "oof_std_dice": 0.03239550686173041
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8330085240656787,
+      "oof_std_dice": 0.032450090891048396
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8341698245211502,
+      "oof_std_dice": 0.03250297734555996
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8318263031055914,
+      "oof_std_dice": 0.03446622797969805
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8323934628658936,
+      "oof_std_dice": 0.034468039642318885
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8333818562100562,
+      "oof_std_dice": 0.03481535330564611
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8302834334796241,
+      "oof_std_dice": 0.03648132083955114
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8307653786587366,
+      "oof_std_dice": 0.03643680519741018
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8313357262635428,
+      "oof_std_dice": 0.0372127878646308
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.82744746483011,
+      "oof_std_dice": 0.03884644994695634
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.827757847041085,
+      "oof_std_dice": 0.0390762467958439
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8278514452529031,
+      "oof_std_dice": 0.04004180910501692
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8237979694271702,
+      "oof_std_dice": 0.041262275998676386
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8239819171783553,
+      "oof_std_dice": 0.04169442992323833
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8240767391379686,
+      "oof_std_dice": 0.042396712874859986
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8190603814195538,
+      "oof_std_dice": 0.04345503042268899
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.819211844557503,
+      "oof_std_dice": 0.04386995285504049
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8190694766848203,
+      "oof_std_dice": 0.04453914581833808
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8131939371778829,
+      "oof_std_dice": 0.04546286951738194
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8132664124902822,
+      "oof_std_dice": 0.045832900330501705
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8129854148896151,
+      "oof_std_dice": 0.04647574669743521
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8056424112243035,
+      "oof_std_dice": 0.04754500832130526
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8055980936166369,
+      "oof_std_dice": 0.04790190529023284
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8050625996046386,
+      "oof_std_dice": 0.048399322505779746
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.7964709766224426,
+      "oof_std_dice": 0.04978002648432594
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.7963732968165338,
+      "oof_std_dice": 0.05003945987964601
+    },
+    {
+      "mode": "d4_768",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.7955644508358384,
+      "oof_std_dice": 0.050802608000538596
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8317416851762213,
+      "oof_std_dice": 0.03368707359764764
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8321543993592101,
+      "oof_std_dice": 0.03375699450287179
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8326705422734166,
+      "oof_std_dice": 0.03375178737015765
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8336313972706056,
+      "oof_std_dice": 0.03527925699705162
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8339374892481706,
+      "oof_std_dice": 0.03541926898867535
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8342013378925035,
+      "oof_std_dice": 0.03548683210815958
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8339783398659447,
+      "oof_std_dice": 0.037169347347436
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8341976449759999,
+      "oof_std_dice": 0.03730012625332732
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8343725016064407,
+      "oof_std_dice": 0.03740142373111987
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8332375231765841,
+      "oof_std_dice": 0.039401499412727345
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8333260582273494,
+      "oof_std_dice": 0.039517600131925804
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8332619040770253,
+      "oof_std_dice": 0.039732196801024064
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8313284156578596,
+      "oof_std_dice": 0.04128624823724933
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8313671389155746,
+      "oof_std_dice": 0.04137628542657747
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8311439638527626,
+      "oof_std_dice": 0.04185379510885492
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8283762915252032,
+      "oof_std_dice": 0.04335886455594848
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8283501005563858,
+      "oof_std_dice": 0.0435836035961587
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8280501878216956,
+      "oof_std_dice": 0.044306562446043064
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8242665509922864,
+      "oof_std_dice": 0.045487199086622285
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8240334671812857,
+      "oof_std_dice": 0.04578331422285805
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8238080548756098,
+      "oof_std_dice": 0.0466105116613256
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8187327815865982,
+      "oof_std_dice": 0.0477880385961977
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8184677893274317,
+      "oof_std_dice": 0.0480499955546048
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8178834374203741,
+      "oof_std_dice": 0.048642097646589916
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8116338073217191,
+      "oof_std_dice": 0.050192859856071824
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8113695427938591,
+      "oof_std_dice": 0.05051514234099299
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8104322624678069,
+      "oof_std_dice": 0.05125370822602848
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8344420179811755,
+      "oof_std_dice": 0.03227377027112155
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8348285711173531,
+      "oof_std_dice": 0.03230693859914101
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8352618731372784,
+      "oof_std_dice": 0.03239539247976557
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8360350784226676,
+      "oof_std_dice": 0.033743530686959275
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8362750433687873,
+      "oof_std_dice": 0.033800799110369754
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.836537150629634,
+      "oof_std_dice": 0.03378588377019086
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8362427093810236,
+      "oof_std_dice": 0.035745791407633586
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8363953937396585,
+      "oof_std_dice": 0.03583352244982676
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8364268395578959,
+      "oof_std_dice": 0.03607450302706472
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8350853108534764,
+      "oof_std_dice": 0.03772155737663689
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8350713410821848,
+      "oof_std_dice": 0.03782150858101739
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8350937562567939,
+      "oof_std_dice": 0.038006580013331515
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8326583246579748,
+      "oof_std_dice": 0.040120081485338736
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8326607910955126,
+      "oof_std_dice": 0.04022612271124879
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8323015003524427,
+      "oof_std_dice": 0.04067846844186507
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8292413135444671,
+      "oof_std_dice": 0.042406569176977146
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8292380005155197,
+      "oof_std_dice": 0.04261559009090399
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8287912652548656,
+      "oof_std_dice": 0.043370003719056464
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8247699078905111,
+      "oof_std_dice": 0.04491454081712082
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8246334203349998,
+      "oof_std_dice": 0.04508666192291018
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.82418946138144,
+      "oof_std_dice": 0.04570733619528335
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8187601574838123,
+      "oof_std_dice": 0.04755590855036996
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8184578001924105,
+      "oof_std_dice": 0.0478274164467239
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8177880364588148,
+      "oof_std_dice": 0.048541433311652206
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8108850054248867,
+      "oof_std_dice": 0.05019867809925906
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8104541374983848,
+      "oof_std_dice": 0.05042705140530203
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8096562975035088,
+      "oof_std_dice": 0.05123228660559262
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8360689450212794,
+      "oof_std_dice": 0.03042106200725602
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8364343877696244,
+      "oof_std_dice": 0.030450775334302547
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8367470820779725,
+      "oof_std_dice": 0.03029455113509691
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8373962136824715,
+      "oof_std_dice": 0.0321455973387103
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8375954206863879,
+      "oof_std_dice": 0.03211368559390862
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8377836025877174,
+      "oof_std_dice": 0.032216221411985914
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8373683173215796,
+      "oof_std_dice": 0.03376964896563245
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8374609100827441,
+      "oof_std_dice": 0.03385081263476913
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.837506365086842,
+      "oof_std_dice": 0.03410489872078126
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8358955284348516,
+      "oof_std_dice": 0.03576543538352908
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8359527704965373,
+      "oof_std_dice": 0.03583610798890892
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8360195231469477,
+      "oof_std_dice": 0.036111674177299
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8333932254079836,
+      "oof_std_dice": 0.03841376692973428
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.833361931972741,
+      "oof_std_dice": 0.03858653203646694
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8331635287635525,
+      "oof_std_dice": 0.03891190896369911
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8295457059385762,
+      "oof_std_dice": 0.041056686984917067
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8294729931523694,
+      "oof_std_dice": 0.04128600965527054
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8290069653095552,
+      "oof_std_dice": 0.04175280012251277
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8247106583660676,
+      "oof_std_dice": 0.04376786648894416
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8245451491131851,
+      "oof_std_dice": 0.04395219617767795
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8239634115477715,
+      "oof_std_dice": 0.04466172396047661
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8182487680395004,
+      "oof_std_dice": 0.046584488759552484
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8179431823666429,
+      "oof_std_dice": 0.04683050862351363
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8172061682860207,
+      "oof_std_dice": 0.04748992668859693
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8099943018163757,
+      "oof_std_dice": 0.049400499721442656
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8095612107324911,
+      "oof_std_dice": 0.049706804261465176
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8088069817137662,
+      "oof_std_dice": 0.05023205130958728
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8361326955454192,
+      "oof_std_dice": 0.029093387358961005
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8363450132790458,
+      "oof_std_dice": 0.029208900185998806
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8368797573152096,
+      "oof_std_dice": 0.029233363794330686
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8371752157978515,
+      "oof_std_dice": 0.030755890428093978
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8373924592548564,
+      "oof_std_dice": 0.03092620019444318
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8376558560540082,
+      "oof_std_dice": 0.030819707008352678
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8369517087123762,
+      "oof_std_dice": 0.03246380888246699
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8371172462945171,
+      "oof_std_dice": 0.032485085403740815
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8372973168621082,
+      "oof_std_dice": 0.03248203555913731
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8356096378129386,
+      "oof_std_dice": 0.03467453372389054
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8356955759437795,
+      "oof_std_dice": 0.03476764774806205
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8356980169903329,
+      "oof_std_dice": 0.03497311737114899
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8329796707551367,
+      "oof_std_dice": 0.036868401465469894
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8330379059970848,
+      "oof_std_dice": 0.03704104242139235
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8328958691034261,
+      "oof_std_dice": 0.03730253806324042
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.829121698322659,
+      "oof_std_dice": 0.039311180499792146
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8290715416518724,
+      "oof_std_dice": 0.03945153437788639
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.828683870353754,
+      "oof_std_dice": 0.03986911733838611
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8239212293335175,
+      "oof_std_dice": 0.04219594563371912
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8238108140370185,
+      "oof_std_dice": 0.042299923751129224
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8233537338228242,
+      "oof_std_dice": 0.042909456846634025
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8175570096544191,
+      "oof_std_dice": 0.04500891620594216
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8173499992897784,
+      "oof_std_dice": 0.045260844459625325
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8166593064617732,
+      "oof_std_dice": 0.04587807946474874
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8093968961890183,
+      "oof_std_dice": 0.04768526966401465
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8091180394522797,
+      "oof_std_dice": 0.047876567069411964
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.808222483427957,
+      "oof_std_dice": 0.04848039582810248
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.834906310702095,
+      "oof_std_dice": 0.028553751016244022
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8352070685288411,
+      "oof_std_dice": 0.02860541816934207
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.836005835514052,
+      "oof_std_dice": 0.02880416007577857
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8360256481436628,
+      "oof_std_dice": 0.029929450225370767
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8363233304289442,
+      "oof_std_dice": 0.02998585369140603
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8366608619605976,
+      "oof_std_dice": 0.030187800309864468
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8357587418887935,
+      "oof_std_dice": 0.03168486796621015
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8359166143586464,
+      "oof_std_dice": 0.03184647302041953
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8361163382785632,
+      "oof_std_dice": 0.03201380051454122
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.834087026608089,
+      "oof_std_dice": 0.03388177583723385
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8341552650100633,
+      "oof_std_dice": 0.034060426600004905
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8342853150643137,
+      "oof_std_dice": 0.034008847414826654
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8313921149588801,
+      "oof_std_dice": 0.03625105751301154
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8313721163904375,
+      "oof_std_dice": 0.03643364564856303
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8313698130582304,
+      "oof_std_dice": 0.03650379273584953
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8276250292393215,
+      "oof_std_dice": 0.03867167856572795
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8276725766651097,
+      "oof_std_dice": 0.03876886554887916
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8275770145971656,
+      "oof_std_dice": 0.039004204861886035
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.822571798968878,
+      "oof_std_dice": 0.041079427101131966
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8225575060873733,
+      "oof_std_dice": 0.04116241230283175
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8220448326672674,
+      "oof_std_dice": 0.04169613741710811
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8164473335407176,
+      "oof_std_dice": 0.04344141045598068
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.816376907188431,
+      "oof_std_dice": 0.0436376346041558
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8157033608307784,
+      "oof_std_dice": 0.04404680337062242
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8086198375226499,
+      "oof_std_dice": 0.04604216235373655
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8083783057194498,
+      "oof_std_dice": 0.04615748418932628
+    },
+    {
+      "mode": "multiscale_d4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8073905633015712,
+      "oof_std_dice": 0.04672963452875073
+    }
+  ],
+  "candidates": [
+    {
+      "filename": "submission_task4_refined_combined.csv",
+      "sha256": "9b4026d9867be05041247cc9257b9d472d6ade578b9a2fb7c345cb2cf5a349e1",
+      "rows": 20,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.1322479248046875
+    },
+    {
+      "filename": "submission_task4_refined_full.csv",
+      "sha256": "4ea93183aab6ac209e6e50600933ea82b7a1330c87b82e8fce56129c8029f1dc",
+      "rows": 20,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.13276710510253906
+    },
+    {
+      "filename": "submission_task4_refined_folds.csv",
+      "sha256": "bc9ab7b62bacaf2abacabc5c7598d22d5796f74ec6c8458f8d819b213582580c",
+      "rows": 20,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.13176956176757812
+    }
+  ],
+  "validation_note": "Existing image-disjoint OOF models, but same validation reused for checkpoint and inference tuning. Full-data refits/aggregated test ensembles have no fresh independent validation.",
+  "external_test_labels_used": false,
+  "refinement_finished": true
+}

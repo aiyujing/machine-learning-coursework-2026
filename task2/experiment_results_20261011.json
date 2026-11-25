@@ -1,0 +1,141 @@
+{
+  "verified_date": "2026-10-11",
+  "kaggle_saved_version": "https://www.kaggle.com/code/shabiba2026/2026task2-fer-deep-learning?scriptVersionId=357223684",
+  "submission_scores": {
+    "submission_fer_resnet18.csv": 0.687,
+    "submission_fer_selected.csv": 0.703,
+    "submission_fer_full.csv": 0.712,
+    "submission_fer_inference.csv": 0.715,
+    "submission_fer_consistent.csv": 0.717
+  },
+  "best_submission": "submission_fer_consistent.csv",
+  "course_grade": null,
+  "course_grading": "teacher determines by final leaderboard rank",
+  "daily_submissions_used": 5,
+  "files": {
+    "fer_effnet_valid_probs.npy": {
+      "bytes": 136328,
+      "sha256": "f76a4160d60bc1ca655e56fda1e04fe28b4c7af688eb4a0abbdb5b5537a82d42"
+    },
+    "fer_effnet_valid_192.npy": {
+      "bytes": 136328,
+      "sha256": "902b1591cc4ba19c7ec2bef97f391b2dc5d86bf648672316409cb577da2bf254"
+    },
+    "fer_effnet_valid_224.npy": {
+      "bytes": 136328,
+      "sha256": "1ad8cd760b9b22d6058ec3d85f6cae394a80762fcb52c8423e3e535ee1ecf558"
+    },
+    "fer_consistency_manifest.json": {
+      "bytes": 406,
+      "sha256": "3b014a37f967c76cb1603e1642377dbc45fbe69aa598de0502ddc8ab71d37fcb"
+    },
+    "fer_effnet_test_probs.npy": {
+      "bytes": 169688,
+      "sha256": "ffb4e0d84d02baed1149a5d6508d5ee95eb765e44f2a2c3bdaccbaa7f223a51d"
+    },
+    "fer_full_manifest.json": {
+      "bytes": 495,
+      "sha256": "3e682529ac163cb86429ca8945861950f82d8fed7791d29a560bc1648637ec05"
+    },
+    "submission_fer_selected.csv": {
+      "bytes": 120116,
+      "sha256": "066cf03182184a8e944fd9d631717999ac375611e60b01426b5d5dd4ed58ceda"
+    },
+    "fer_training_history.csv": {
+      "bytes": 2790,
+      "sha256": "d4410d3ca8f28364b3e8e36150bee7c119c619f93177ffab54695a1c71e0526f"
+    },
+    "fer_resnet18_full.pt": {
+      "bytes": 44799179,
+      "sha256": "a40873d6016907db374dd00a0ea2ab17a268544787f8eb9ef3de68383d4d6d86"
+    },
+    "fer_effnet_b2_best.pt": {
+      "bytes": 31268253,
+      "sha256": "949cb8cdc02f6b925c0b71b7dbcb9dd75287af831c8a929353bf63b20078cc75"
+    },
+    "submission_fer_full.csv": {
+      "bytes": 120116,
+      "sha256": "09ae5701a1955346e9e6579496b0fb70ee0f752fe7ce4287ee6ec44a17d52f12"
+    },
+    "fer_resnet18_full_test_probs.npy": {
+      "bytes": 169688,
+      "sha256": "ae3942fa8fa075069e7428d565cfe4ebdc6391210934a761f1a56aa9b5b7c9b4"
+    },
+    "task2_data_audit.json": {
+      "bytes": 189825,
+      "sha256": "24e5ce7d936058213e0bac61116f10cc417b21c06d0084865dfef202c66ceb05"
+    },
+    "fer_experiment_manifest.json": {
+      "bytes": 2548,
+      "sha256": "0c3b45aa7399cf7e41e202c02cc1d3b7c6aecda72c1c13afee005e0ebb1be470"
+    },
+    "fer_consistency_matches.json": {
+      "bytes": 114087,
+      "sha256": "73942db6ec917066df683f7b591e6e02eb9d71862802dde4ccd38c7114b764b1"
+    },
+    "fer_inference_manifest.json": {
+      "bytes": 2041,
+      "sha256": "cf52b10ff5cd4bbaf5a5384e2d92e3ac8a18992f780487a26de2b19e62155bcc"
+    },
+    "fer_resnet18_full_history.csv": {
+      "bytes": 286,
+      "sha256": "c1d85e3cd0b039049c99a1f09d605e333595f26430dba7c5f427719245e99311"
+    },
+    "fer_effnet_b2_full_history.csv": {
+      "bytes": 451,
+      "sha256": "1400128ddfbd215fa74f6b2e5dee4e7c83713fcb9f1a4f21ee518e8983218716"
+    },
+    "fer_effnet_full_test_probs.npy": {
+      "bytes": 169688,
+      "sha256": "aae4d097b5c2a1ae13d9e81df8bb2c1c7007847f89c02ac19e9713b238a941a3"
+    },
+    "fer_effnet_history.csv": {
+      "bytes": 1691,
+      "sha256": "ff9f0ee53c25d97a9f93cb48396bd9c3f6225a1b0a99f61852c5c6436bfe5b55"
+    },
+    "fer_resnet18_best.pt": {
+      "bytes": 44795019,
+      "sha256": "cfdea7708857d9d6f225b1a827f794ffe9255c2f812d9a0e32609811c42d06f7"
+    },
+    "fer_effnet_b2_full.pt": {
+      "bytes": 31297309,
+      "sha256": "f568ee17c886994d2f926a0e3019948a8708884c2574ad5338b3b25e7eb1b6f8"
+    },
+    "submission_fer_consistent.csv": {
+      "bytes": 120116,
+      "sha256": "d58429b5cf4798fc020c1da895c17fd8117807e2ea44b66e85357adacd2985cb"
+    },
+    "submission_fer_resnet18.csv": {
+      "bytes": 120116,
+      "sha256": "5f8e85cfb7b86770cc8b517c389e420f24b5ffff25ace5f9951abb5767e19d4c"
+    },
+    "fer_test_probs.npy": {
+      "bytes": 169688,
+      "sha256": "7e1ffc181969eba6bfa588f999587cbbc0cec9e0ad9176e9d433dfac1470e146"
+    },
+    "fer_valid_indices.npy": {
+      "bytes": 45528,
+      "sha256": "9678a5d9c11e3424cb625382fd2052a5ca3347330632ec2797757ed3d3672581"
+    },
+    "fer_valid_probs.npy": {
+      "bytes": 136328,
+      "sha256": "f4d85251d22dde21844f945ebb4b1b282e4c8bf671a8ed2085c978c29c721b3e"
+    },
+    "fer_selected_manifest.json": {
+      "bytes": 647,
+      "sha256": "0b5d7f9aeae6d1d9bacc08dc5bb40ea40e35acd0e6870a200396cd998c35b0e3"
+    },
+    "fer_training_index.csv": {
+      "bytes": 3172520,
+      "sha256": "f1c06e7a4f2b82a6096db1f815239d284b0ed72ef6683a1f9d7385b5e165e8da"
+    },
+    "submission_fer_inference.csv": {
+      "bytes": 120116,
+      "sha256": "d4cd2c9ba1c3452c13111d67fa549ef2d5c97bbc3e1848a76e44ae7a68ea3ccf"
+    }
+  },
+  "best_selected_for_final_score": true,
+  "leaderboard_rank_at_verification": 3,
+  "leaderboard_team_count_at_verification": 4,
+  "draft_gpu_session_stopped": true
+}

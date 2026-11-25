@@ -1,0 +1,2861 @@
+{
+  "competition": "2026task-4",
+  "metric": "Dice, higher is better",
+  "seed": 20261031,
+  "versions": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.1.3",
+    "segmentation_models_pytorch": "0.5.0",
+    "cuda_device": "Tesla T4"
+  },
+  "official_training_images": 20,
+  "test_images": 20,
+  "folds": 4,
+  "validation_unit": "whole image, grouped by exact pixel hash",
+  "target_convention": "white-positive, PIL bilinear resize512, row-major, 1-based",
+  "overview_polarity_conflict": "Actual supplied masks and official encoder use white vessels; overview prose states the opposite.",
+  "fold_results": [
+    {
+      "architecture": "resnet34_rgb",
+      "fold": 0,
+      "best_epoch": 80,
+      "selected_validation_dice": 0.8412862268329946,
+      "heldout_tta4_dice_at_half": 0.8454460534897315
+    },
+    {
+      "architecture": "resnet34_rgb",
+      "fold": 1,
+      "best_epoch": 70,
+      "selected_validation_dice": 0.8232562204170527,
+      "heldout_tta4_dice_at_half": 0.8274806916971922
+    },
+    {
+      "architecture": "resnet34_rgb",
+      "fold": 2,
+      "best_epoch": 80,
+      "selected_validation_dice": 0.7959358750914352,
+      "heldout_tta4_dice_at_half": 0.8017450578156815
+    },
+    {
+      "architecture": "resnet34_rgb",
+      "fold": 3,
+      "best_epoch": 80,
+      "selected_validation_dice": 0.8333822668889889,
+      "heldout_tta4_dice_at_half": 0.8372329838701397
+    },
+    {
+      "architecture": "efficientnet_b2_clahe",
+      "fold": 0,
+      "best_epoch": 70,
+      "selected_validation_dice": 0.8431904673261187,
+      "heldout_tta4_dice_at_half": 0.8473719517059898
+    },
+    {
+      "architecture": "efficientnet_b2_clahe",
+      "fold": 1,
+      "best_epoch": 50,
+      "selected_validation_dice": 0.8211667188223073,
+      "heldout_tta4_dice_at_half": 0.8265685458620879
+    },
+    {
+      "architecture": "efficientnet_b2_clahe",
+      "fold": 2,
+      "best_epoch": 80,
+      "selected_validation_dice": 0.8091246405161099,
+      "heldout_tta4_dice_at_half": 0.8135798250672414
+    },
+    {
+      "architecture": "efficientnet_b2_clahe",
+      "fold": 3,
+      "best_epoch": 90,
+      "selected_validation_dice": 0.8308268571402001,
+      "heldout_tta4_dice_at_half": 0.8347733936463444
+    }
+  ],
+  "selection_options": [
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8219695998147426,
+      "oof_std_dice": 0.03653792966692493,
+      "oof_global_dice": 0.8233512893716097,
+      "nearest_label_sensitivity_dice": 0.7157396386790079
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8223417015723766,
+      "oof_std_dice": 0.03672090542666336,
+      "oof_global_dice": 0.8237144326487689,
+      "nearest_label_sensitivity_dice": 0.7163126457079355
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8229754228787669,
+      "oof_std_dice": 0.037082985756040354,
+      "oof_global_dice": 0.8243127549410476,
+      "nearest_label_sensitivity_dice": 0.717590634226219
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8233945937459822,
+      "oof_std_dice": 0.03744349769000574,
+      "oof_global_dice": 0.824697495509928,
+      "nearest_label_sensitivity_dice": 0.7236599671052832
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8237068012539595,
+      "oof_std_dice": 0.03767111324321532,
+      "oof_global_dice": 0.8249979321509304,
+      "nearest_label_sensitivity_dice": 0.7242322660664355
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8242638206218494,
+      "oof_std_dice": 0.037989475549537584,
+      "oof_global_dice": 0.8255266147222693,
+      "nearest_label_sensitivity_dice": 0.7254461208822177
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8241503713893277,
+      "oof_std_dice": 0.03854908422467892,
+      "oof_global_dice": 0.8253741108425803,
+      "nearest_label_sensitivity_dice": 0.7306524157738292
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8243882362076087,
+      "oof_std_dice": 0.03878906553474829,
+      "oof_global_dice": 0.8255954726654379,
+      "nearest_label_sensitivity_dice": 0.7311741274931497
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8247255162039725,
+      "oof_std_dice": 0.03919803857747876,
+      "oof_global_dice": 0.8259130138737895,
+      "nearest_label_sensitivity_dice": 0.7322618995788146
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8242467282184137,
+      "oof_std_dice": 0.03967779847957699,
+      "oof_global_dice": 0.8254067603402375,
+      "nearest_label_sensitivity_dice": 0.7373582814479183
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.82445332414516,
+      "oof_std_dice": 0.0399294740845038,
+      "oof_global_dice": 0.8255956070268934,
+      "nearest_label_sensitivity_dice": 0.7378592649255837
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8246437184330542,
+      "oof_std_dice": 0.040282957900836844,
+      "oof_global_dice": 0.8257567418822367,
+      "nearest_label_sensitivity_dice": 0.7389639479210589
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8234651473076179,
+      "oof_std_dice": 0.040829195504513395,
+      "oof_global_dice": 0.8245586662934528,
+      "nearest_label_sensitivity_dice": 0.743377115994845
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8236515992844469,
+      "oof_std_dice": 0.04105784826774161,
+      "oof_global_dice": 0.8247292742206096,
+      "nearest_label_sensitivity_dice": 0.7438800904833034
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8237945045497927,
+      "oof_std_dice": 0.04157515266321599,
+      "oof_global_dice": 0.8248385503445751,
+      "nearest_label_sensitivity_dice": 0.7450403488552358
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8222638157143333,
+      "oof_std_dice": 0.04183026629103738,
+      "oof_global_dice": 0.82327577534588,
+      "nearest_label_sensitivity_dice": 0.7492316897747616
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.822394292107014,
+      "oof_std_dice": 0.042093946680187594,
+      "oof_global_dice": 0.8233988777539099,
+      "nearest_label_sensitivity_dice": 0.7497195416122683
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8224668240616791,
+      "oof_std_dice": 0.04261377101433586,
+      "oof_global_dice": 0.8234188798010744,
+      "nearest_label_sensitivity_dice": 0.7508164653313768
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8203404403300647,
+      "oof_std_dice": 0.04281399727192322,
+      "oof_global_dice": 0.8212545177597533,
+      "nearest_label_sensitivity_dice": 0.7548799690811216
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.820448268702069,
+      "oof_std_dice": 0.04306397436448012,
+      "oof_global_dice": 0.8213553134233001,
+      "nearest_label_sensitivity_dice": 0.7553558855564646
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8203622145025152,
+      "oof_std_dice": 0.043501910014914345,
+      "oof_global_dice": 0.8211992183967839,
+      "nearest_label_sensitivity_dice": 0.7562900106707924
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8174326014412345,
+      "oof_std_dice": 0.04399883789680089,
+      "oof_global_dice": 0.8182495793401852,
+      "nearest_label_sensitivity_dice": 0.7602700753755129
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8174326575967896,
+      "oof_std_dice": 0.0442056524311758,
+      "oof_global_dice": 0.8182373166071281,
+      "nearest_label_sensitivity_dice": 0.7606696885585493
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8173469636637979,
+      "oof_std_dice": 0.04466820652599535,
+      "oof_global_dice": 0.8180969072214348,
+      "nearest_label_sensitivity_dice": 0.761750541294277
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.813407563863332,
+      "oof_std_dice": 0.045254687749464645,
+      "oof_global_dice": 0.8141192016995664,
+      "nearest_label_sensitivity_dice": 0.7655480622294023
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8133925130865766,
+      "oof_std_dice": 0.04541736026753953,
+      "oof_global_dice": 0.8140909204311575,
+      "nearest_label_sensitivity_dice": 0.7659969981806835
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8128685631484596,
+      "oof_std_dice": 0.04588878105427801,
+      "oof_global_dice": 0.8135060614991008,
+      "nearest_label_sensitivity_dice": 0.7668532774667346
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261451224707163,
+      "oof_std_dice": 0.0341896476537938,
+      "oof_global_dice": 0.8275205199723019,
+      "nearest_label_sensitivity_dice": 0.7172322493289718
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8264961743198158,
+      "oof_std_dice": 0.0344901175843459,
+      "oof_global_dice": 0.8278652573118395,
+      "nearest_label_sensitivity_dice": 0.7177808374687844
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8269040266289585,
+      "oof_std_dice": 0.03466218004208107,
+      "oof_global_dice": 0.8282563644757451,
+      "nearest_label_sensitivity_dice": 0.7188288354080915
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8274732525956482,
+      "oof_std_dice": 0.03594381462571837,
+      "oof_global_dice": 0.8287763764052932,
+      "nearest_label_sensitivity_dice": 0.7257090193272479
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8277185907775186,
+      "oof_std_dice": 0.03618085440357092,
+      "oof_global_dice": 0.8290069705038606,
+      "nearest_label_sensitivity_dice": 0.7261302837056778
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8279462666913922,
+      "oof_std_dice": 0.03653509075181134,
+      "oof_global_dice": 0.8292184737168014,
+      "nearest_label_sensitivity_dice": 0.7271418448277391
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8281016462399611,
+      "oof_std_dice": 0.03733341521682272,
+      "oof_global_dice": 0.8293290706186541,
+      "nearest_label_sensitivity_dice": 0.7332504758053418
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8283116987202869,
+      "oof_std_dice": 0.03754071029271536,
+      "oof_global_dice": 0.8295250338204045,
+      "nearest_label_sensitivity_dice": 0.7337070181681918
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8283572183866511,
+      "oof_std_dice": 0.037984457061513544,
+      "oof_global_dice": 0.8295398985551281,
+      "nearest_label_sensitivity_dice": 0.7345906082707602
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8278690298759617,
+      "oof_std_dice": 0.03875272581355449,
+      "oof_global_dice": 0.8290039259148358,
+      "nearest_label_sensitivity_dice": 0.7404114650505941
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.828022027930633,
+      "oof_std_dice": 0.03895275360112966,
+      "oof_global_dice": 0.8291364166555004,
+      "nearest_label_sensitivity_dice": 0.7408569025711332
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8281667547541647,
+      "oof_std_dice": 0.03953382531056154,
+      "oof_global_dice": 0.8292504987175963,
+      "nearest_label_sensitivity_dice": 0.7417544150596618
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8269770853764751,
+      "oof_std_dice": 0.04000691285724612,
+      "oof_global_dice": 0.8280422996403589,
+      "nearest_label_sensitivity_dice": 0.7469730112119111
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.827060967989814,
+      "oof_std_dice": 0.04016615318192872,
+      "oof_global_dice": 0.8281148639052478,
+      "nearest_label_sensitivity_dice": 0.7473968847135983
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8270240523604272,
+      "oof_std_dice": 0.040808832443340076,
+      "oof_global_dice": 0.8280472406996929,
+      "nearest_label_sensitivity_dice": 0.7483207880532344
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8254856225268721,
+      "oof_std_dice": 0.041528905525459334,
+      "oof_global_dice": 0.826468518377563,
+      "nearest_label_sensitivity_dice": 0.7533515135913356
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8254909053758125,
+      "oof_std_dice": 0.04169261755258976,
+      "oof_global_dice": 0.8264585944863289,
+      "nearest_label_sensitivity_dice": 0.7537013225322915
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8252156169011731,
+      "oof_std_dice": 0.042488012345390326,
+      "oof_global_dice": 0.826157642958246,
+      "nearest_label_sensitivity_dice": 0.7543904501123607
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8232139565726193,
+      "oof_std_dice": 0.042923439849767105,
+      "oof_global_dice": 0.8240881817781303,
+      "nearest_label_sensitivity_dice": 0.7594519257083314
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8231831841920331,
+      "oof_std_dice": 0.043097215531898346,
+      "oof_global_dice": 0.8240444511320509,
+      "nearest_label_sensitivity_dice": 0.7597478930211933
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.822828918650964,
+      "oof_std_dice": 0.04379149872630299,
+      "oof_global_dice": 0.8236599579994343,
+      "nearest_label_sensitivity_dice": 0.7603809697842847
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.819916836421385,
+      "oof_std_dice": 0.04426958903316196,
+      "oof_global_dice": 0.8206738782991287,
+      "nearest_label_sensitivity_dice": 0.7654661282058427
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8196813230976966,
+      "oof_std_dice": 0.04455692663009825,
+      "oof_global_dice": 0.8204329444166354,
+      "nearest_label_sensitivity_dice": 0.7656485628905815
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8192694713516134,
+      "oof_std_dice": 0.04496520628287934,
+      "oof_global_dice": 0.8199767656169706,
+      "nearest_label_sensitivity_dice": 0.7661692449569621
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8154426073937338,
+      "oof_std_dice": 0.04582873946928527,
+      "oof_global_dice": 0.8160562150569485,
+      "nearest_label_sensitivity_dice": 0.771235624847248
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8151707700289406,
+      "oof_std_dice": 0.04604470689389453,
+      "oof_global_dice": 0.8157719355994851,
+      "nearest_label_sensitivity_dice": 0.7713848205762712
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8144377525797774,
+      "oof_std_dice": 0.046359135154537566,
+      "oof_global_dice": 0.8149835752026743,
+      "nearest_label_sensitivity_dice": 0.7715910465481619
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8284389676217373,
+      "oof_std_dice": 0.02916102643914179,
+      "oof_global_dice": 0.8297446093446559,
+      "nearest_label_sensitivity_dice": 0.7172010236918027
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8288868607991045,
+      "oof_std_dice": 0.029111856016609167,
+      "oof_global_dice": 0.8301807530680216,
+      "nearest_label_sensitivity_dice": 0.7178730624911078
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8295039887975136,
+      "oof_std_dice": 0.029000978121667378,
+      "oof_global_dice": 0.8307650209535901,
+      "nearest_label_sensitivity_dice": 0.7191232658665336
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8304756964665543,
+      "oof_std_dice": 0.030111399380697876,
+      "oof_global_dice": 0.8316768124449141,
+      "nearest_label_sensitivity_dice": 0.726634365228495
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308060893516,
+      "oof_std_dice": 0.03011031748042964,
+      "oof_global_dice": 0.8319965954824229,
+      "nearest_label_sensitivity_dice": 0.7272542537038775
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8311642872150069,
+      "oof_std_dice": 0.03037484840969802,
+      "oof_global_dice": 0.8323393570455184,
+      "nearest_label_sensitivity_dice": 0.7283578264063963
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8314811759098042,
+      "oof_std_dice": 0.0315499567167594,
+      "oof_global_dice": 0.8325929830125273,
+      "nearest_label_sensitivity_dice": 0.7353237029751822
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8316418570475264,
+      "oof_std_dice": 0.03174174613273848,
+      "oof_global_dice": 0.8327511668792003,
+      "nearest_label_sensitivity_dice": 0.7357519896750169
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.831557662508134,
+      "oof_std_dice": 0.03218407827208542,
+      "oof_global_dice": 0.8326398330516853,
+      "nearest_label_sensitivity_dice": 0.7365660857968169
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8313436033757251,
+      "oof_std_dice": 0.03360088971897928,
+      "oof_global_dice": 0.8323707552727649,
+      "nearest_label_sensitivity_dice": 0.7432348457178414
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.831351306153632,
+      "oof_std_dice": 0.033814272660127806,
+      "oof_global_dice": 0.8323652513972528,
+      "nearest_label_sensitivity_dice": 0.7435162738642178
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8312493199847106,
+      "oof_std_dice": 0.034276835869714285,
+      "oof_global_dice": 0.8322367272721881,
+      "nearest_label_sensitivity_dice": 0.7442094833564131
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8300500929973993,
+      "oof_std_dice": 0.03700028776448302,
+      "oof_global_dice": 0.8310049599577274,
+      "nearest_label_sensitivity_dice": 0.7503231621531271
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8299773486654656,
+      "oof_std_dice": 0.03719780489655307,
+      "oof_global_dice": 0.8309193676248076,
+      "nearest_label_sensitivity_dice": 0.7505210219231291
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8297267628530897,
+      "oof_std_dice": 0.037959933349768965,
+      "oof_global_dice": 0.8306668690821539,
+      "nearest_label_sensitivity_dice": 0.7509471987516624
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8276485315767378,
+      "oof_std_dice": 0.040186636846237106,
+      "oof_global_dice": 0.8285512294778623,
+      "nearest_label_sensitivity_dice": 0.7566110729978525
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8275630134275005,
+      "oof_std_dice": 0.04043433158267402,
+      "oof_global_dice": 0.8284501528651325,
+      "nearest_label_sensitivity_dice": 0.7567722407477528
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8271525404073875,
+      "oof_std_dice": 0.041268044158009706,
+      "oof_global_dice": 0.8280619248484377,
+      "nearest_label_sensitivity_dice": 0.7570856330504216
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8246521062762662,
+      "oof_std_dice": 0.04227889208612088,
+      "oof_global_dice": 0.8254693498246646,
+      "nearest_label_sensitivity_dice": 0.7625170411722848
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8244879678791266,
+      "oof_std_dice": 0.042521060526176165,
+      "oof_global_dice": 0.8252959349773689,
+      "nearest_label_sensitivity_dice": 0.7626869668154798
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8238433184534253,
+      "oof_std_dice": 0.04332057730212612,
+      "oof_global_dice": 0.8246557969578694,
+      "nearest_label_sensitivity_dice": 0.7628729212045011
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.82084136886081,
+      "oof_std_dice": 0.04426910078678699,
+      "oof_global_dice": 0.8215319551130728,
+      "nearest_label_sensitivity_dice": 0.7679903182927317
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.820618999164504,
+      "oof_std_dice": 0.04443010587707947,
+      "oof_global_dice": 0.8213039630059727,
+      "nearest_label_sensitivity_dice": 0.7681342391551335
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8198447433147464,
+      "oof_std_dice": 0.045060421780066647,
+      "oof_global_dice": 0.8205131501247469,
+      "nearest_label_sensitivity_dice": 0.7681971094963161
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8155460276407828,
+      "oof_std_dice": 0.04611725409222155,
+      "oof_global_dice": 0.8160955505690451,
+      "nearest_label_sensitivity_dice": 0.7732904070061287
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8152531839130102,
+      "oof_std_dice": 0.04630688859129039,
+      "oof_global_dice": 0.8157967313460792,
+      "nearest_label_sensitivity_dice": 0.7734393870491669
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8144287822367009,
+      "oof_std_dice": 0.04693183971570707,
+      "oof_global_dice": 0.8149386008960573,
+      "nearest_label_sensitivity_dice": 0.7734269407987024
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8279624615175823,
+      "oof_std_dice": 0.029018012380534225,
+      "oof_global_dice": 0.8293068291750545,
+      "nearest_label_sensitivity_dice": 0.7188117423607104
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8283166885901718,
+      "oof_std_dice": 0.02898371381530374,
+      "oof_global_dice": 0.829646274282413,
+      "nearest_label_sensitivity_dice": 0.7193142605449386
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8288355928337084,
+      "oof_std_dice": 0.029066573006595476,
+      "oof_global_dice": 0.8301312541196446,
+      "nearest_label_sensitivity_dice": 0.7204498959907536
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8291956106011524,
+      "oof_std_dice": 0.029860282883868026,
+      "oof_global_dice": 0.8304238522108116,
+      "nearest_label_sensitivity_dice": 0.7270794438499497
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8294797481502962,
+      "oof_std_dice": 0.029822286179523465,
+      "oof_global_dice": 0.8306914572066201,
+      "nearest_label_sensitivity_dice": 0.7275469732850464
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8297605073240968,
+      "oof_std_dice": 0.030044477067604346,
+      "oof_global_dice": 0.8309524283461627,
+      "nearest_label_sensitivity_dice": 0.7284874260457588
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8297659101000618,
+      "oof_std_dice": 0.03066144719487879,
+      "oof_global_dice": 0.8308975978266177,
+      "nearest_label_sensitivity_dice": 0.7347369114029544
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8299872665204562,
+      "oof_std_dice": 0.03061999738801818,
+      "oof_global_dice": 0.8311062669974838,
+      "nearest_label_sensitivity_dice": 0.7352107241680568
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.830382108172385,
+      "oof_std_dice": 0.030929440107769175,
+      "oof_global_dice": 0.8314902344158862,
+      "nearest_label_sensitivity_dice": 0.7362375483586481
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8297088569655274,
+      "oof_std_dice": 0.03159610753172034,
+      "oof_global_dice": 0.8307243805057483,
+      "nearest_label_sensitivity_dice": 0.7418958797391733
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8298858143792336,
+      "oof_std_dice": 0.03163469591325122,
+      "oof_global_dice": 0.8308948308480195,
+      "nearest_label_sensitivity_dice": 0.7423493728922065
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8301232676836081,
+      "oof_std_dice": 0.031814010885853936,
+      "oof_global_dice": 0.8311299182988223,
+      "nearest_label_sensitivity_dice": 0.7433832763327972
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.829025612893943,
+      "oof_std_dice": 0.03284425536806256,
+      "oof_global_dice": 0.8299212766867883,
+      "nearest_label_sensitivity_dice": 0.7482868942520405
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8291853414370403,
+      "oof_std_dice": 0.032923170892540335,
+      "oof_global_dice": 0.8300740770199234,
+      "nearest_label_sensitivity_dice": 0.748717382097393
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.829069553129837,
+      "oof_std_dice": 0.03340134591373392,
+      "oof_global_dice": 0.8299703769385134,
+      "nearest_label_sensitivity_dice": 0.7495331010429271
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8276496957744696,
+      "oof_std_dice": 0.034188308156626934,
+      "oof_global_dice": 0.8284294946952927,
+      "nearest_label_sensitivity_dice": 0.7545551590295011
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8276817955533268,
+      "oof_std_dice": 0.034378752453124425,
+      "oof_global_dice": 0.8284600193532975,
+      "nearest_label_sensitivity_dice": 0.7549102884599712
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8273994671042828,
+      "oof_std_dice": 0.03467103564520618,
+      "oof_global_dice": 0.8281647423318069,
+      "nearest_label_sensitivity_dice": 0.7556056681578067
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8253380414058643,
+      "oof_std_dice": 0.03585370844901233,
+      "oof_global_dice": 0.8259999858856101,
+      "nearest_label_sensitivity_dice": 0.7605976703335526
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.82527656737649,
+      "oof_std_dice": 0.036110495760950274,
+      "oof_global_dice": 0.8259315841287374,
+      "nearest_label_sensitivity_dice": 0.7609582619603167
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8247418175738357,
+      "oof_std_dice": 0.03658092641018942,
+      "oof_global_dice": 0.8253876304563551,
+      "nearest_label_sensitivity_dice": 0.7613967838646689
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8219062541079797,
+      "oof_std_dice": 0.037921057659040164,
+      "oof_global_dice": 0.8224567207144305,
+      "nearest_label_sensitivity_dice": 0.7664126961615791
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8217451619889795,
+      "oof_std_dice": 0.03826154077559018,
+      "oof_global_dice": 0.8222936097543642,
+      "nearest_label_sensitivity_dice": 0.7666796723448573
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8212188622208139,
+      "oof_std_dice": 0.03878421831333021,
+      "oof_global_dice": 0.8217434951298404,
+      "nearest_label_sensitivity_dice": 0.7669507663863351
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8172978755457331,
+      "oof_std_dice": 0.040314217504120245,
+      "oof_global_dice": 0.8176969569728952,
+      "nearest_label_sensitivity_dice": 0.7720901890280705
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8171429361029828,
+      "oof_std_dice": 0.04062942814515997,
+      "oof_global_dice": 0.8175389104665363,
+      "nearest_label_sensitivity_dice": 0.772333477956077
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8163308664443809,
+      "oof_std_dice": 0.04137752829721467,
+      "oof_global_dice": 0.8166952914871014,
+      "nearest_label_sensitivity_dice": 0.7724229914939669
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8250372634309405,
+      "oof_std_dice": 0.028877536836758456,
+      "oof_global_dice": 0.8263984858608165,
+      "nearest_label_sensitivity_dice": 0.7184028854807881
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.825411367288414,
+      "oof_std_dice": 0.028909753213742586,
+      "oof_global_dice": 0.8267521483593582,
+      "nearest_label_sensitivity_dice": 0.7189441986057019
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8260121071759514,
+      "oof_std_dice": 0.028994003971378874,
+      "oof_global_dice": 0.8273280926431437,
+      "nearest_label_sensitivity_dice": 0.7201482604761943
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8263563112681714,
+      "oof_std_dice": 0.02960087447303871,
+      "oof_global_dice": 0.8276074986052157,
+      "nearest_label_sensitivity_dice": 0.7261134906205692
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8267275911721879,
+      "oof_std_dice": 0.029642854555494057,
+      "oof_global_dice": 0.8279709864447041,
+      "nearest_label_sensitivity_dice": 0.7266665689318098
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8272020383955624,
+      "oof_std_dice": 0.029750813673650744,
+      "oof_global_dice": 0.8284093172880532,
+      "nearest_label_sensitivity_dice": 0.7278158006740004
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8267017626590425,
+      "oof_std_dice": 0.030421866443654376,
+      "oof_global_dice": 0.8278515992080538,
+      "nearest_label_sensitivity_dice": 0.7327267561515196
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8269693869105067,
+      "oof_std_dice": 0.030424013887933907,
+      "oof_global_dice": 0.828112325957123,
+      "nearest_label_sensitivity_dice": 0.7332363287276699
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8273776696905084,
+      "oof_std_dice": 0.030611799656746812,
+      "oof_global_dice": 0.8284881354210599,
+      "nearest_label_sensitivity_dice": 0.7343827425757244
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8266291825496694,
+      "oof_std_dice": 0.031271004404919985,
+      "oof_global_dice": 0.8276620504536805,
+      "nearest_label_sensitivity_dice": 0.7390270865173996
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8268934302499347,
+      "oof_std_dice": 0.03129678905414887,
+      "oof_global_dice": 0.8279162575570804,
+      "nearest_label_sensitivity_dice": 0.7395169844443191
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8271309992198473,
+      "oof_std_dice": 0.031598100215605156,
+      "oof_global_dice": 0.8281290853007137,
+      "nearest_label_sensitivity_dice": 0.7405627807628109
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8260771709511839,
+      "oof_std_dice": 0.03189720914982187,
+      "oof_global_dice": 0.8269948311205056,
+      "nearest_label_sensitivity_dice": 0.7450903920361867
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8263176803975825,
+      "oof_std_dice": 0.0319394675299491,
+      "oof_global_dice": 0.8272235024885918,
+      "nearest_label_sensitivity_dice": 0.7456148183805892
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8264995436837929,
+      "oof_std_dice": 0.032223424803795045,
+      "oof_global_dice": 0.8273776212014309,
+      "nearest_label_sensitivity_dice": 0.746702087681119
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8249129924444583,
+      "oof_std_dice": 0.03287615039270851,
+      "oof_global_dice": 0.8257238847699738,
+      "nearest_label_sensitivity_dice": 0.7507434730474056
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.825081280117623,
+      "oof_std_dice": 0.03299896210801211,
+      "oof_global_dice": 0.825885393854538,
+      "nearest_label_sensitivity_dice": 0.7512685437234513
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8251343871761062,
+      "oof_std_dice": 0.03315698755714199,
+      "oof_global_dice": 0.8259201801615216,
+      "nearest_label_sensitivity_dice": 0.7522493271153528
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8230969647987134,
+      "oof_std_dice": 0.03399514308006031,
+      "oof_global_dice": 0.8237781376291199,
+      "nearest_label_sensitivity_dice": 0.7563204378075505
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8232108896400756,
+      "oof_std_dice": 0.03413621803726242,
+      "oof_global_dice": 0.8238811466520749,
+      "nearest_label_sensitivity_dice": 0.7568319180442541
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8230268900266585,
+      "oof_std_dice": 0.0342541061034019,
+      "oof_global_dice": 0.8236723104592131,
+      "nearest_label_sensitivity_dice": 0.7577766376488055
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8203585589132782,
+      "oof_std_dice": 0.035110591356594625,
+      "oof_global_dice": 0.8209123510220004,
+      "nearest_label_sensitivity_dice": 0.7616624128547709
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8203951787854897,
+      "oof_std_dice": 0.035326868149048375,
+      "oof_global_dice": 0.820936761007521,
+      "nearest_label_sensitivity_dice": 0.7621711336466439
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8199914795056987,
+      "oof_std_dice": 0.03573530300102321,
+      "oof_global_dice": 0.8205208667641504,
+      "nearest_label_sensitivity_dice": 0.7628268240044336
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8167691181702643,
+      "oof_std_dice": 0.03656652133822797,
+      "oof_global_dice": 0.8171892727756972,
+      "nearest_label_sensitivity_dice": 0.7671406210583772
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8166125895990228,
+      "oof_std_dice": 0.036765170164286855,
+      "oof_global_dice": 0.8170279064107392,
+      "nearest_label_sensitivity_dice": 0.7674801749102053
+    },
+    {
+      "mode": "plain",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8161840686100776,
+      "oof_std_dice": 0.03718285103990965,
+      "oof_global_dice": 0.8165702139892531,
+      "nearest_label_sensitivity_dice": 0.7681261242027316
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261117085549774,
+      "oof_std_dice": 0.03412396702996911,
+      "oof_global_dice": 0.8275436998626354,
+      "nearest_label_sensitivity_dice": 0.7160646751335219
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8264645417214698,
+      "oof_std_dice": 0.0344112017135096,
+      "oof_global_dice": 0.8278897902515353,
+      "nearest_label_sensitivity_dice": 0.7166173685741397
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8270123502540161,
+      "oof_std_dice": 0.03454006287553466,
+      "oof_global_dice": 0.8284203579624738,
+      "nearest_label_sensitivity_dice": 0.7176911728612968
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.828007546479817,
+      "oof_std_dice": 0.03535442269610788,
+      "oof_global_dice": 0.8293477269987216,
+      "nearest_label_sensitivity_dice": 0.7253519012073888
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8283647432081717,
+      "oof_std_dice": 0.035514399714369815,
+      "oof_global_dice": 0.8296992467369151,
+      "nearest_label_sensitivity_dice": 0.7258819577848591
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8288230764623327,
+      "oof_std_dice": 0.035875338910458986,
+      "oof_global_dice": 0.8301300096590536,
+      "nearest_label_sensitivity_dice": 0.7269558412600328
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8290125901921994,
+      "oof_std_dice": 0.036601186925440385,
+      "oof_global_dice": 0.8302718742816669,
+      "nearest_label_sensitivity_dice": 0.733773773809698
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8292203089666066,
+      "oof_std_dice": 0.03678302964576115,
+      "oof_global_dice": 0.8304755785982286,
+      "nearest_label_sensitivity_dice": 0.7341418351077251
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8293330828627864,
+      "oof_std_dice": 0.03695558558568287,
+      "oof_global_dice": 0.8305565978455804,
+      "nearest_label_sensitivity_dice": 0.7350860046104977
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8289065231826539,
+      "oof_std_dice": 0.03778501125525755,
+      "oof_global_dice": 0.8300600650161912,
+      "nearest_label_sensitivity_dice": 0.7413132504703691
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8291227322775825,
+      "oof_std_dice": 0.03789236086990786,
+      "oof_global_dice": 0.8302624270352035,
+      "nearest_label_sensitivity_dice": 0.7417148910149314
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8289469556855977,
+      "oof_std_dice": 0.038225733805248456,
+      "oof_global_dice": 0.8300631702391362,
+      "nearest_label_sensitivity_dice": 0.7423802027855687
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8279761967181862,
+      "oof_std_dice": 0.03906030865252038,
+      "oof_global_dice": 0.8290296480645446,
+      "nearest_label_sensitivity_dice": 0.7484156607581688
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8280196814046498,
+      "oof_std_dice": 0.039273212580256324,
+      "oof_global_dice": 0.8290708484760141,
+      "nearest_label_sensitivity_dice": 0.7487054708664873
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8278654656609896,
+      "oof_std_dice": 0.0394839688204868,
+      "oof_global_dice": 0.8288929818833792,
+      "nearest_label_sensitivity_dice": 0.7493432155323927
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261406857767766,
+      "oof_std_dice": 0.04070709478278748,
+      "oof_global_dice": 0.8271231810754162,
+      "nearest_label_sensitivity_dice": 0.7548017789178699
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8261062349415965,
+      "oof_std_dice": 0.04090838613620176,
+      "oof_global_dice": 0.8270775423164618,
+      "nearest_label_sensitivity_dice": 0.7550571359389208
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8257686750434907,
+      "oof_std_dice": 0.041131520793643433,
+      "oof_global_dice": 0.8267073220235387,
+      "nearest_label_sensitivity_dice": 0.7555807115792103
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8234457354594221,
+      "oof_std_dice": 0.0422635197285312,
+      "oof_global_dice": 0.8243452083713122,
+      "nearest_label_sensitivity_dice": 0.7609683760402477
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8233434227329124,
+      "oof_std_dice": 0.04245591515133085,
+      "oof_global_dice": 0.8242329011575712,
+      "nearest_label_sensitivity_dice": 0.7612151314381634
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8227534934161129,
+      "oof_std_dice": 0.04282044937798477,
+      "oof_global_dice": 0.8236215935568978,
+      "nearest_label_sensitivity_dice": 0.761640679569682
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8195501306180148,
+      "oof_std_dice": 0.04398189215813803,
+      "oof_global_dice": 0.8203475760177653,
+      "nearest_label_sensitivity_dice": 0.7666693411211584
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8192767017253677,
+      "oof_std_dice": 0.04412004885374084,
+      "oof_global_dice": 0.8200645538496184,
+      "nearest_label_sensitivity_dice": 0.7668349625750894
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.818346840471073,
+      "oof_std_dice": 0.0448328699804457,
+      "oof_global_dice": 0.819099637609894,
+      "nearest_label_sensitivity_dice": 0.7670677597434282
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8147263141416033,
+      "oof_std_dice": 0.045966840211322434,
+      "oof_global_dice": 0.8153846403763707,
+      "nearest_label_sensitivity_dice": 0.7721804494431777
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8144753561284123,
+      "oof_std_dice": 0.04612846072025119,
+      "oof_global_dice": 0.8151219309948032,
+      "nearest_label_sensitivity_dice": 0.7723349766261784
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.813366032900708,
+      "oof_std_dice": 0.04676833821131756,
+      "oof_global_dice": 0.8139792842141104,
+      "nearest_label_sensitivity_dice": 0.7724347953309646
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8294418009176916,
+      "oof_std_dice": 0.03208461752242686,
+      "oof_global_dice": 0.8308236212730392,
+      "nearest_label_sensitivity_dice": 0.7180307141516971
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8297134552542118,
+      "oof_std_dice": 0.0322483878861686,
+      "oof_global_dice": 0.8310935803720177,
+      "nearest_label_sensitivity_dice": 0.7184930232326661
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8301994285375326,
+      "oof_std_dice": 0.032569980591035254,
+      "oof_global_dice": 0.8315623598856136,
+      "nearest_label_sensitivity_dice": 0.7195049741293865
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8311279860220109,
+      "oof_std_dice": 0.033469305228073724,
+      "oof_global_dice": 0.8324340778845046,
+      "nearest_label_sensitivity_dice": 0.7274969118035521
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8312964529149562,
+      "oof_std_dice": 0.033767940237142906,
+      "oof_global_dice": 0.8326011776801693,
+      "nearest_label_sensitivity_dice": 0.72781920290224
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316149792936747,
+      "oof_std_dice": 0.034100701417762426,
+      "oof_global_dice": 0.8329041257776206,
+      "nearest_label_sensitivity_dice": 0.7287006884574969
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8318180681883721,
+      "oof_std_dice": 0.03500704828188597,
+      "oof_global_dice": 0.833036757705316,
+      "nearest_label_sensitivity_dice": 0.7359397491123686
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.831914416311222,
+      "oof_std_dice": 0.03527703303567125,
+      "oof_global_dice": 0.8331317926557605,
+      "nearest_label_sensitivity_dice": 0.7362176688633957
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8319399690017034,
+      "oof_std_dice": 0.03545401881162351,
+      "oof_global_dice": 0.8331468458145286,
+      "nearest_label_sensitivity_dice": 0.736906578938588
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8315116041680627,
+      "oof_std_dice": 0.03659538654881834,
+      "oof_global_dice": 0.8326234567667491,
+      "nearest_label_sensitivity_dice": 0.7435821999138599
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8316008527848009,
+      "oof_std_dice": 0.036754449489964904,
+      "oof_global_dice": 0.8327007356839045,
+      "nearest_label_sensitivity_dice": 0.7438578844126297
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8315049478984085,
+      "oof_std_dice": 0.03696120836427299,
+      "oof_global_dice": 0.8325689032106193,
+      "nearest_label_sensitivity_dice": 0.7445232895585321
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8304968468920053,
+      "oof_std_dice": 0.037987442574133036,
+      "oof_global_dice": 0.8315061701825243,
+      "nearest_label_sensitivity_dice": 0.7507668274814707
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8304555821508689,
+      "oof_std_dice": 0.03810475052410167,
+      "oof_global_dice": 0.8314523244838478,
+      "nearest_label_sensitivity_dice": 0.7509781239818444
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8300935837743092,
+      "oof_std_dice": 0.03846087750333736,
+      "oof_global_dice": 0.8310518687554096,
+      "nearest_label_sensitivity_dice": 0.7514640097582207
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8283093555964633,
+      "oof_std_dice": 0.03966955999787301,
+      "oof_global_dice": 0.8292130399432,
+      "nearest_label_sensitivity_dice": 0.7572273146964449
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8282244592166116,
+      "oof_std_dice": 0.039752619205168004,
+      "oof_global_dice": 0.8291108427192598,
+      "nearest_label_sensitivity_dice": 0.7574646983677167
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8278307283088802,
+      "oof_std_dice": 0.04000963865593489,
+      "oof_global_dice": 0.8286832215961738,
+      "nearest_label_sensitivity_dice": 0.7579455306723278
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8254141253725009,
+      "oof_std_dice": 0.041402260630027866,
+      "oof_global_dice": 0.8261941114564784,
+      "nearest_label_sensitivity_dice": 0.7636898739291383
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.825273705234334,
+      "oof_std_dice": 0.041555858568934956,
+      "oof_global_dice": 0.8260378911381725,
+      "nearest_label_sensitivity_dice": 0.7638657262067279
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8246153171034744,
+      "oof_std_dice": 0.04169122061544553,
+      "oof_global_dice": 0.8253491929683345,
+      "nearest_label_sensitivity_dice": 0.7641301853511957
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8210947425406949,
+      "oof_std_dice": 0.043533065951634496,
+      "oof_global_dice": 0.8217765852280895,
+      "nearest_label_sensitivity_dice": 0.7696034971013124
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.82082243896597,
+      "oof_std_dice": 0.04367350247358526,
+      "oof_global_dice": 0.8214901812130916,
+      "nearest_label_sensitivity_dice": 0.7697098018398308
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8200556288966302,
+      "oof_std_dice": 0.04424208389449877,
+      "oof_global_dice": 0.8207068654583408,
+      "nearest_label_sensitivity_dice": 0.7698729602529093
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8156950827956304,
+      "oof_std_dice": 0.045522843159689845,
+      "oof_global_dice": 0.8162287124251383,
+      "nearest_label_sensitivity_dice": 0.7750538439664882
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8153122633828126,
+      "oof_std_dice": 0.04573046950848605,
+      "oof_global_dice": 0.8158308315778379,
+      "nearest_label_sensitivity_dice": 0.7750467453770408
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.25,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8143023990386868,
+      "oof_std_dice": 0.04618863995345833,
+      "oof_global_dice": 0.8147852644383413,
+      "nearest_label_sensitivity_dice": 0.7751553821343508
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.831346486029469,
+      "oof_std_dice": 0.029304211628254088,
+      "oof_global_dice": 0.8326579594949114,
+      "nearest_label_sensitivity_dice": 0.7192103715773228
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8315186835501776,
+      "oof_std_dice": 0.029429612880736956,
+      "oof_global_dice": 0.8328317432784162,
+      "nearest_label_sensitivity_dice": 0.7195936084959114
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8319599754194542,
+      "oof_std_dice": 0.029726146573818214,
+      "oof_global_dice": 0.8332524289430143,
+      "nearest_label_sensitivity_dice": 0.7206127359955767
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331528922989172,
+      "oof_std_dice": 0.030473772112800675,
+      "oof_global_dice": 0.8343688782694341,
+      "nearest_label_sensitivity_dice": 0.7289003810500676
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8332490464138376,
+      "oof_std_dice": 0.030658764531382634,
+      "oof_global_dice": 0.8344606789068508,
+      "nearest_label_sensitivity_dice": 0.7292131922729889
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8335047831851728,
+      "oof_std_dice": 0.030976555201239042,
+      "oof_global_dice": 0.8347097327628387,
+      "nearest_label_sensitivity_dice": 0.7300993521776482
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8336591499261224,
+      "oof_std_dice": 0.031748112454803516,
+      "oof_global_dice": 0.8347764192915286,
+      "nearest_label_sensitivity_dice": 0.7372913361896176
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8337449390648976,
+      "oof_std_dice": 0.03188033943965164,
+      "oof_global_dice": 0.8348523563399609,
+      "nearest_label_sensitivity_dice": 0.7375683423429812
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8337685636310171,
+      "oof_std_dice": 0.03227114635463736,
+      "oof_global_dice": 0.8348570774201832,
+      "nearest_label_sensitivity_dice": 0.738316087918168
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8333940268633974,
+      "oof_std_dice": 0.03323902460867746,
+      "oof_global_dice": 0.8344037673622151,
+      "nearest_label_sensitivity_dice": 0.7451696782596419
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8334399191701326,
+      "oof_std_dice": 0.033439928096250376,
+      "oof_global_dice": 0.8344393955245165,
+      "nearest_label_sensitivity_dice": 0.7454302795161305
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8332875935765719,
+      "oof_std_dice": 0.03362737645164096,
+      "oof_global_dice": 0.8342754336700708,
+      "nearest_label_sensitivity_dice": 0.7460261714070626
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8319699675334988,
+      "oof_std_dice": 0.03548310655057818,
+      "oof_global_dice": 0.8328664253711047,
+      "nearest_label_sensitivity_dice": 0.752391412983614
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8319758061279513,
+      "oof_std_dice": 0.03571537355564195,
+      "oof_global_dice": 0.8328634306996343,
+      "nearest_label_sensitivity_dice": 0.7526548301734738
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316673061370692,
+      "oof_std_dice": 0.03601913376657711,
+      "oof_global_dice": 0.83252815428604,
+      "nearest_label_sensitivity_dice": 0.7529938994517413
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8297623817227832,
+      "oof_std_dice": 0.03777355492517924,
+      "oof_global_dice": 0.8305561404740311,
+      "nearest_label_sensitivity_dice": 0.7589187911162887
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8297032064171918,
+      "oof_std_dice": 0.03794206476079715,
+      "oof_global_dice": 0.8304765383762921,
+      "nearest_label_sensitivity_dice": 0.7591268039079766
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8292795302360364,
+      "oof_std_dice": 0.038309758779325936,
+      "oof_global_dice": 0.8300292945075668,
+      "nearest_label_sensitivity_dice": 0.7594769534952239
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8265084033387933,
+      "oof_std_dice": 0.039906822194637696,
+      "oof_global_dice": 0.8271805999370224,
+      "nearest_label_sensitivity_dice": 0.7652002729930113
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8263046806343477,
+      "oof_std_dice": 0.04006414593995947,
+      "oof_global_dice": 0.8269665590908328,
+      "nearest_label_sensitivity_dice": 0.76528141913747
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8258006723779164,
+      "oof_std_dice": 0.04032229168530857,
+      "oof_global_dice": 0.8264473693605351,
+      "nearest_label_sensitivity_dice": 0.7654981261302899
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8220575053860502,
+      "oof_std_dice": 0.04219820354966446,
+      "oof_global_dice": 0.8226342914317335,
+      "nearest_label_sensitivity_dice": 0.7710063593252828
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8218708687108865,
+      "oof_std_dice": 0.0423381976632965,
+      "oof_global_dice": 0.8224372964928609,
+      "nearest_label_sensitivity_dice": 0.7710723012404457
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8210014804300144,
+      "oof_std_dice": 0.04248738202327275,
+      "oof_global_dice": 0.8215410305151593,
+      "nearest_label_sensitivity_dice": 0.77107296678446
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8164072644428086,
+      "oof_std_dice": 0.04442249105673245,
+      "oof_global_dice": 0.8168391316864154,
+      "nearest_label_sensitivity_dice": 0.7764559010184116
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8160602039385951,
+      "oof_std_dice": 0.04460844302400376,
+      "oof_global_dice": 0.8164842545614058,
+      "nearest_label_sensitivity_dice": 0.7764155471520278
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.5,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8151289931113703,
+      "oof_std_dice": 0.04477907724632792,
+      "oof_global_dice": 0.8154950704789974,
+      "nearest_label_sensitivity_dice": 0.7765226886820128
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8306181062189332,
+      "oof_std_dice": 0.02848664509974209,
+      "oof_global_dice": 0.8319172793267796,
+      "nearest_label_sensitivity_dice": 0.7194156620425362
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308617384140075,
+      "oof_std_dice": 0.028508309169593828,
+      "oof_global_dice": 0.8321442156523974,
+      "nearest_label_sensitivity_dice": 0.719844893389663
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8311696330854094,
+      "oof_std_dice": 0.028630449315388974,
+      "oof_global_dice": 0.8324508572969678,
+      "nearest_label_sensitivity_dice": 0.7207928324292935
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.832566264204506,
+      "oof_std_dice": 0.029263260478840397,
+      "oof_global_dice": 0.8337519572504316,
+      "nearest_label_sensitivity_dice": 0.7288731506294122
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8327253642842342,
+      "oof_std_dice": 0.029378757430292522,
+      "oof_global_dice": 0.8339063135138912,
+      "nearest_label_sensitivity_dice": 0.7292245147669147
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8329226593931558,
+      "oof_std_dice": 0.029619029394734354,
+      "oof_global_dice": 0.8340958485283947,
+      "nearest_label_sensitivity_dice": 0.73007400285721
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8332662929744737,
+      "oof_std_dice": 0.030204727374802242,
+      "oof_global_dice": 0.8343279230535905,
+      "nearest_label_sensitivity_dice": 0.7371832443174036
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8333460539745217,
+      "oof_std_dice": 0.03035071283401263,
+      "oof_global_dice": 0.8344042208640358,
+      "nearest_label_sensitivity_dice": 0.737455535575705
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8335655098813023,
+      "oof_std_dice": 0.030595712695123387,
+      "oof_global_dice": 0.8346149243013707,
+      "nearest_label_sensitivity_dice": 0.7384085030937965
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8331272266872525,
+      "oof_std_dice": 0.03139776980757805,
+      "oof_global_dice": 0.8340717621152498,
+      "nearest_label_sensitivity_dice": 0.7448923931914284
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8331930552512254,
+      "oof_std_dice": 0.03151433115802465,
+      "oof_global_dice": 0.8341244929386291,
+      "nearest_label_sensitivity_dice": 0.7451693487007203
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.83317989557554,
+      "oof_std_dice": 0.031816823853107364,
+      "oof_global_dice": 0.8340989208933448,
+      "nearest_label_sensitivity_dice": 0.7459340548549975
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8321325587091412,
+      "oof_std_dice": 0.032751462471363714,
+      "oof_global_dice": 0.8329543990132494,
+      "nearest_label_sensitivity_dice": 0.752003177600099
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8322204684841186,
+      "oof_std_dice": 0.03287189704819112,
+      "oof_global_dice": 0.8330257367731048,
+      "nearest_label_sensitivity_dice": 0.7523184401879057
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8320755177797678,
+      "oof_std_dice": 0.033132568510033024,
+      "oof_global_dice": 0.8328760504298793,
+      "nearest_label_sensitivity_dice": 0.7530004233280514
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8299709222553414,
+      "oof_std_dice": 0.034450447470208825,
+      "oof_global_dice": 0.8306538874718438,
+      "nearest_label_sensitivity_dice": 0.7585792926690854
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8299396861188354,
+      "oof_std_dice": 0.034638300386758886,
+      "oof_global_dice": 0.8306227977709643,
+      "nearest_label_sensitivity_dice": 0.7587905951897269
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8295345446449677,
+      "oof_std_dice": 0.03512180097786004,
+      "oof_global_dice": 0.8301926544868441,
+      "nearest_label_sensitivity_dice": 0.7592486366793849
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8269219312065654,
+      "oof_std_dice": 0.03635051313387204,
+      "oof_global_dice": 0.8274743266541346,
+      "nearest_label_sensitivity_dice": 0.7647886666880213
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8267397002358748,
+      "oof_std_dice": 0.03658040457026074,
+      "oof_global_dice": 0.8272897199213923,
+      "nearest_label_sensitivity_dice": 0.7649083417365482
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8262133220911074,
+      "oof_std_dice": 0.03676473440855165,
+      "oof_global_dice": 0.8267326380068183,
+      "nearest_label_sensitivity_dice": 0.7652482088339274
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8230103829171627,
+      "oof_std_dice": 0.038327311296191116,
+      "oof_global_dice": 0.8234152465563601,
+      "nearest_label_sensitivity_dice": 0.7708902838336792
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8226851860911875,
+      "oof_std_dice": 0.03863226140275742,
+      "oof_global_dice": 0.8230893316056465,
+      "nearest_label_sensitivity_dice": 0.7708884608060967
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8219367590630482,
+      "oof_std_dice": 0.038816675431703924,
+      "oof_global_dice": 0.8223095732336658,
+      "nearest_label_sensitivity_dice": 0.7710393561381453
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8174454683113905,
+      "oof_std_dice": 0.04075446907645274,
+      "oof_global_dice": 0.8177308176755387,
+      "nearest_label_sensitivity_dice": 0.7763658806394177
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8171047682452877,
+      "oof_std_dice": 0.04086866191790334,
+      "oof_global_dice": 0.8173785804910235,
+      "nearest_label_sensitivity_dice": 0.7763712849486464
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 0.75,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8162284520148868,
+      "oof_std_dice": 0.04123133590878143,
+      "oof_global_dice": 0.8164638049918395,
+      "nearest_label_sensitivity_dice": 0.7763650646723297
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8286702910965079,
+      "oof_std_dice": 0.028102372272259195,
+      "oof_global_dice": 0.8299787879116515,
+      "nearest_label_sensitivity_dice": 0.7187126891129628
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8290290167066457,
+      "oof_std_dice": 0.02807930407394272,
+      "oof_global_dice": 0.8303235411997524,
+      "nearest_label_sensitivity_dice": 0.7192327858036706
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.3,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8296119727030984,
+      "oof_std_dice": 0.02813733100170725,
+      "oof_global_dice": 0.8308765304257905,
+      "nearest_label_sensitivity_dice": 0.7203319232439128
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8305946153293611,
+      "oof_std_dice": 0.028671886686771668,
+      "oof_global_dice": 0.8317712416573564,
+      "nearest_label_sensitivity_dice": 0.7278343084414666
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8308991754859871,
+      "oof_std_dice": 0.028713295043873644,
+      "oof_global_dice": 0.8320647537677267,
+      "nearest_label_sensitivity_dice": 0.7283138138203122
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.35,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.831261416580572,
+      "oof_std_dice": 0.028812825803899596,
+      "oof_global_dice": 0.8324135050869952,
+      "nearest_label_sensitivity_dice": 0.7293618610826996
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8314564504515923,
+      "oof_std_dice": 0.029547384300701262,
+      "oof_global_dice": 0.8325209743540977,
+      "nearest_label_sensitivity_dice": 0.7359965812667496
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8316574462548803,
+      "oof_std_dice": 0.029671732588799845,
+      "oof_global_dice": 0.8327165592654897,
+      "nearest_label_sensitivity_dice": 0.7364157784715037
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8318441599957117,
+      "oof_std_dice": 0.029899631361414183,
+      "oof_global_dice": 0.8329023064731865,
+      "nearest_label_sensitivity_dice": 0.7373314391716367
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8316074811700723,
+      "oof_std_dice": 0.030573086962512836,
+      "oof_global_dice": 0.8325432208043037,
+      "nearest_label_sensitivity_dice": 0.7434658576599279
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8317116640592396,
+      "oof_std_dice": 0.030713820400847094,
+      "oof_global_dice": 0.8326510373519382,
+      "nearest_label_sensitivity_dice": 0.7437774834642965
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.45,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8316620839153627,
+      "oof_std_dice": 0.030865885697239713,
+      "oof_global_dice": 0.83258476682306,
+      "nearest_label_sensitivity_dice": 0.7446102799645913
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8305734290704159,
+      "oof_std_dice": 0.03168721245954258,
+      "oof_global_dice": 0.8313747703613111,
+      "nearest_label_sensitivity_dice": 0.7503071062357916
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8306298621942974,
+      "oof_std_dice": 0.03181280514356715,
+      "oof_global_dice": 0.8314353851092205,
+      "nearest_label_sensitivity_dice": 0.7505793989697763
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.5,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8304547223780065,
+      "oof_std_dice": 0.03202526870617448,
+      "oof_global_dice": 0.8312359821462294,
+      "nearest_label_sensitivity_dice": 0.7512641638667392
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8287696493710568,
+      "oof_std_dice": 0.033075898513552235,
+      "oof_global_dice": 0.8294268196844045,
+      "nearest_label_sensitivity_dice": 0.7567276389419905
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8287367319321272,
+      "oof_std_dice": 0.03324124857537687,
+      "oof_global_dice": 0.8293991824502557,
+      "nearest_label_sensitivity_dice": 0.7569646199395478
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.55,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8284759397783409,
+      "oof_std_dice": 0.033320908094517675,
+      "oof_global_dice": 0.8290736788689206,
+      "nearest_label_sensitivity_dice": 0.7576413921702421
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8261182420423914,
+      "oof_std_dice": 0.03450322323064686,
+      "oof_global_dice": 0.8266276632971351,
+      "nearest_label_sensitivity_dice": 0.7628300872515015
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8259917236784954,
+      "oof_std_dice": 0.0346430076703785,
+      "oof_global_dice": 0.8264968188958667,
+      "nearest_label_sensitivity_dice": 0.7629953250426147
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.6,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8256571597203102,
+      "oof_std_dice": 0.03484134069612403,
+      "oof_global_dice": 0.8261346386293268,
+      "nearest_label_sensitivity_dice": 0.7636302712353141
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8223596300555197,
+      "oof_std_dice": 0.0362749536306844,
+      "oof_global_dice": 0.8227359831958783,
+      "nearest_label_sensitivity_dice": 0.7686067580101236
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8221472460655479,
+      "oof_std_dice": 0.03645077996504228,
+      "oof_global_dice": 0.8225097720558856,
+      "nearest_label_sensitivity_dice": 0.7687549323627125
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.65,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8216212841215134,
+      "oof_std_dice": 0.036627482412056905,
+      "oof_global_dice": 0.8219564813807286,
+      "nearest_label_sensitivity_dice": 0.7692473285755954
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 0,
+      "oof_mean_dice": 0.8173419146642699,
+      "oof_std_dice": 0.0381963418583779,
+      "oof_global_dice": 0.8175754480505911,
+      "nearest_label_sensitivity_dice": 0.7741053553399462
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 8,
+      "oof_mean_dice": 0.8170977201220957,
+      "oof_std_dice": 0.038344180095478374,
+      "oof_global_dice": 0.8173173667829581,
+      "nearest_label_sensitivity_dice": 0.7742293266732109
+    },
+    {
+      "mode": "tta4",
+      "second_architecture_weight": 1.0,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "oof_mean_dice": 0.8161862414549728,
+      "oof_std_dice": 0.03861416569860619,
+      "oof_global_dice": 0.8163664499149254,
+      "nearest_label_sensitivity_dice": 0.7744888637217332
+    }
+  ],
+  "selected": {
+    "mode": "tta4",
+    "second_architecture_weight": 0.5,
+    "threshold": 0.4,
+    "minimum_component_pixels": 24,
+    "oof_mean_dice": 0.8337685636310171,
+    "oof_std_dice": 0.03227114635463736,
+    "oof_global_dice": 0.8348570774201832,
+    "nearest_label_sensitivity_dice": 0.738316087918168
+  },
+  "nearest_label_sensitivity_selection": {
+    "mode": "tta4",
+    "second_architecture_weight": 0.5,
+    "threshold": 0.7,
+    "minimum_component_pixels": 24,
+    "oof_mean_dice": 0.8151289931113703,
+    "oof_std_dice": 0.04477907724632792,
+    "oof_global_dice": 0.8154950704789974,
+    "nearest_label_sensitivity_dice": 0.7765226886820128
+  },
+  "candidates": [
+    {
+      "filename": "submission_task4_fold_ensemble.csv",
+      "sha256": "e6bb6db0aecbfcd2f76bb96c16cd8f47e79e9c11e7468ef2dbf153385b43427a",
+      "rows": 20,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.12940502166748047,
+      "independent_full_model_validation_dice": null
+    },
+    {
+      "filename": "submission_task4_full_refit.csv",
+      "sha256": "f8356db8961db5f27b92326f5adcca9995f1875bd1cc225e52971f39b17dbfa8",
+      "rows": 20,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.1302335739135742,
+      "independent_full_model_validation_dice": null
+    },
+    {
+      "filename": "submission_task4_combined.csv",
+      "sha256": "b8766f09d199501afa0d3245cdfdd3818b506b3fc853c89211557896f52107f9",
+      "rows": 20,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.12981014251708983,
+      "independent_full_model_validation_dice": null
+    },
+    {
+      "filename": "submission_task4_resnet34_rgb.csv",
+      "sha256": "ccbb5da7e23628a9c9374c6028d6dc35ddf3e1cdbe886f89be338d147df76ff5",
+      "rows": 20,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.1295093536376953,
+      "architecture_oof_selection_dice": 0.8293330828627864,
+      "independent_full_model_validation_dice": null
+    },
+    {
+      "filename": "submission_task4_efficientnet_b2_clahe.csv",
+      "sha256": "cc58f42f419d4698918db37effd36c4edfb4abc79f9c552031edb27925dbf1c5",
+      "rows": 20,
+      "threshold": 0.4,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.13105411529541017,
+      "architecture_oof_selection_dice": 0.8318441599957117,
+      "independent_full_model_validation_dice": null
+    },
+    {
+      "filename": "submission_task4_nearest_label_sensitivity.csv",
+      "sha256": "b4afaef8afa5a57a8a833b7279b7c3cdb317fa71fd8b148c5fb3d3b21b120d74",
+      "rows": 20,
+      "threshold": 0.7,
+      "minimum_component_pixels": 24,
+      "foreground_fraction": 0.10782833099365234,
+      "independent_full_model_validation_dice": null,
+      "protocol_note": "Sensitivity candidate tuned on nearest-resized binary train labels instead of the official bilinear-positive converter labels."
+    }
+  ],
+  "validation_limitation": "OOF predictions are image-disjoint. The same held-out images select checkpoints, inference, threshold and blend; this is a selection estimate, not a fresh independent test. All-data refits and nonlinear postprocessing have no new independent test.",
+  "external_retinal_data_used": false,
+  "external_test_labels_used": false,
+  "training_finished": true
+}

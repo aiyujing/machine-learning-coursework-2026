@@ -1,0 +1,43 @@
+[
+  {
+    "filename": "submission_fer_geometric_refined.csv",
+    "rows": 7065,
+    "sha256": "9e906d229cf63f609a85dc8503067ea33cb44d612a4dea5004e797a43ca1e28f",
+    "consistency_changes": 15,
+    "mode": "geometric",
+    "face_weight": 0.2,
+    "gamma": 0.5,
+    "validation_accuracy": 0.720704845814978
+  },
+  {
+    "filename": "submission_fer_arithmetic_refined.csv",
+    "rows": 7065,
+    "sha256": "1f33e22af1a68b49c99cb39eae179f0f51dfaa9db753551e3a99c34706782831",
+    "consistency_changes": 15,
+    "mode": "arithmetic",
+    "face_weight": 0.30000000000000004,
+    "gamma": 0.25,
+    "validation_accuracy": 0.7198237885462555
+  },
+  {
+    "filename": "submission_fer_five_model_calibrated.csv",
+    "rows": 7065,
+    "sha256": "8d628a25f97e2993127daa3085227fa19f509b98a09a317f58c2279c460d3065",
+    "consistency_changes": 15,
+    "validation_accuracy": 0.7182378854625551
+  },
+  {
+    "filename": "submission_fer_five_model_selected.csv",
+    "rows": 7065,
+    "sha256": "96ee6b5507d94a07aae18d9587659243258cc5584ca081023e0f2d69705ff59b",
+    "consistency_changes": 13,
+    "validation_accuracy": 0.7178854625550661
+  },
+  {
+    "filename": "submission_fer_facenet.csv",
+    "rows": 7065,
+    "sha256": "ec993459af44d66e5cd2582daaee3561f4ce039381806ae514d7dc6af6a82f61",
+    "consistency_changes": 22,
+    "validation_accuracy": 0.7057268722466961
+  }
+]

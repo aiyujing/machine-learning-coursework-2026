@@ -1,0 +1,112 @@
+{
+  "verified_on": "2026-10-23 Asia/Shanghai",
+  "submissions": [
+    {
+      "date": "2026-10-20",
+      "filename": "submission_task3_classical.csv",
+      "status": "Complete",
+      "public_rmse": 34.92157,
+      "rows": 40,
+      "sha256": "e05c7d111d4a825d7dc0ce31fd8ab8973bd30e2c02f635b1d44c11a5ee576632",
+      "method": "independent CPU green-channel center-surround with training-coordinate spatial prior",
+      "validation_rmse": 36.42545687478512,
+      "validation_note": "original random four-fold baseline; duplicate training images 0039/0077 were discovered afterward; neural validation is grouped by pixel hash",
+      "course_grade": null,
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-20",
+      "filename": "submission_task3_checkpoint_fold0.csv",
+      "status": "Complete",
+      "public_rmse": 18.62723,
+      "rows": 40,
+      "sha256": "13b0cc4e052e55072dc72f2226c02ca651375a0d0d50a0dc57db9935d317753e",
+      "method": "single grouped fold ResNet18 coarse-to-fine; flip TTA; local Gaussian position prior sigma20",
+      "validation_rmse": 17.47717979577458,
+      "validation_rows": 20,
+      "partial_cross_validation": true,
+      "coarse_epoch": 5,
+      "fine_epoch": 45,
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-21",
+      "filename": "submission_task3_cloud_plain_flip_mean.csv",
+      "sha256": "337383ac9086ca2eb37d19b7fb9ea364c104686cc9d097ae4cf052552c7d666c",
+      "status": "Complete",
+      "public_rmse": 38.56002,
+      "validation_rmse": 15.33791182028847,
+      "validation_rows": 80,
+      "partial_cross_validation": false,
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-21",
+      "filename": "submission_task3_six_geometric.csv",
+      "sha256": "51825974cf4301448cc825cdf386220056812f0146a0b727a8ad7558b1d4a28b",
+      "status": "Complete",
+      "public_rmse": 17.99608,
+      "validation_rmse": null,
+      "validation_note": "No independent estimate of cross-fold nonlinear aggregation; component methods use held-out grouped validation. No test labels used.",
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-21",
+      "filename": "submission_task3_seven_variant_median.csv",
+      "sha256": "a07d91be6cc0d69445bad8fa7df590390cb8053d73a944931c153967a6d252d1",
+      "status": "Complete",
+      "public_rmse": 17.9676,
+      "validation_rmse": null,
+      "validation_note": "No independent estimate of cross-fold nonlinear aggregation; component methods use held-out grouped validation. No test labels used.",
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-23",
+      "filename": "submission_task3_detector_validated_blend.csv",
+      "status": "Complete",
+      "public_rmse": 18.392,
+      "validation_rmse": 15.844959747600436,
+      "validation_rows": 20,
+      "sha256": "251cd31e165a6d8ca8756e76aa16ca008465c05af2ba55b2727a6a51ac320462",
+      "rows": 40,
+      "source_notebook": "https://www.kaggle.com/code/shabiba2026/2026task3-cloud-detector-optimization",
+      "version_id": 361421000,
+      "method": "blend",
+      "validation_note": "Checkpoint, inference mode and blend weight selected on the same 20-image holdout; not an independent final test.",
+      "course_grade": null,
+      "selected_for_final": false
+    },
+    {
+      "date": "2026-10-23",
+      "filename": "submission_task3_robust_detector_blend.csv",
+      "status": "Complete",
+      "public_rmse": 16.95712,
+      "validation_rmse": null,
+      "validation_rows": null,
+      "sha256": "06f17de9da0af44161d639ae09f8d6daf5f1e371a63891a3131f642fb997fca0",
+      "rows": 40,
+      "source_notebook": "https://www.kaggle.com/code/shabiba2026/2026task3-cloud-detector-optimization",
+      "version_id": 361421000,
+      "method": "robust_full_blend",
+      "validation_note": "Weight transferred from single-model holdout study; robust ensemble itself has no independent OOF estimate.",
+      "course_grade": null,
+      "selected_for_final": true
+    },
+    {
+      "date": "2026-10-23",
+      "filename": "submission_task3_detector_full_refit.csv",
+      "status": "Complete",
+      "public_rmse": 17.02054,
+      "validation_rmse": null,
+      "validation_rows": null,
+      "sha256": "038ef5c43458f26e7373fd79049b58b95203204fa2c00cad0181348448d5d6d3",
+      "rows": 40,
+      "source_notebook": "https://www.kaggle.com/code/shabiba2026/2026task3-cloud-detector-optimization",
+      "version_id": 361421000,
+      "method": "full_refit",
+      "validation_note": "Includes all original holdout images; fixed last epoch, no post-refit independent validation.",
+      "course_grade": null,
+      "selected_for_final": true
+    }
+  ]
+}

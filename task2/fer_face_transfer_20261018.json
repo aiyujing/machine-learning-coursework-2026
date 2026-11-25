@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-18",
+  "model": "InceptionResnetV1",
+  "pretraining": "VGGFace2 identity recognition; facenet-pytorch==2.6.0",
+  "pretraining_source": "https://github.com/timesler/facenet-pytorch",
+  "normalization": "(pixel - 127.5) / 128",
+  "size": 160,
+  "seed": 20261020,
+  "best_epoch": 8,
+  "epochs_trained": 18,
+  "single_validation_accuracy": 0.7057268722466961,
+  "ensemble_validation_scores": {
+    "0.0": 0.7057268722466961,
+    "0.25": 0.7178854625550661,
+    "0.5": 0.7171806167400882,
+    "0.75": 0.7099559471365638,
+    "1.0": 0.7057268722466961
+  },
+  "selected_face_weight": 0.25,
+  "calibration_validation_scores": {
+    "0.0": 0.7178854625550661,
+    "0.25": 0.7173568281938326,
+    "0.5": 0.7170044052863436,
+    "0.75": 0.7182378854625551,
+    "1.0": 0.7173568281938326
+  },
+  "selected_gamma": 0.75,
+  "full_training_epochs": 5,
+  "full_model_validation_accuracy": null,
+  "emotion_training_labels": "official competition training set only",
+  "external_test_labels_used": false,
+  "submissions": [
+    {
+      "filename": "submission_fer_facenet.csv",
+      "rows": 7065,
+      "sha256": "ec993459af44d66e5cd2582daaee3561f4ce039381806ae514d7dc6af6a82f61",
+      "consistency_changes": 22
+    },
+    {
+      "filename": "submission_fer_five_model_selected.csv",
+      "rows": 7065,
+      "sha256": "96ee6b5507d94a07aae18d9587659243258cc5584ca081023e0f2d69705ff59b",
+      "consistency_changes": 13
+    },
+    {
+      "filename": "submission_fer_five_model_calibrated.csv",
+      "rows": 7065,
+      "sha256": "8d628a25f97e2993127daa3085227fa19f509b98a09a317f58c2279c460d3065",
+      "consistency_changes": 15
+    }
+  ],
+  "seconds": 1208.1199986934662,
+  "kaggle_submissions": {
+    "submission_fer_five_model_calibrated.csv": {
+      "status": "Complete",
+      "public_score": 0.738,
+      "selected_for_final_score": false
+    }
+  }
+}

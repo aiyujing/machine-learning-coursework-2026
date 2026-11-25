@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-18",
+  "selection_data": "untouched pre-refit grouped validation models; no test labels",
+  "resolution_ensemble_options": [
+    {
+      "resolution": 160,
+      "resnet50_weight": 0.0,
+      "validation_accuracy": 0.6916299559471366
+    },
+    {
+      "resolution": 160,
+      "resnet50_weight": 0.25,
+      "validation_accuracy": 0.6995594713656388
+    },
+    {
+      "resolution": 160,
+      "resnet50_weight": 0.5,
+      "validation_accuracy": 0.6986784140969163
+    },
+    {
+      "resolution": 160,
+      "resnet50_weight": 0.75,
+      "validation_accuracy": 0.6868722466960352
+    },
+    {
+      "resolution": 160,
+      "resnet50_weight": 1.0,
+      "validation_accuracy": 0.6773568281938326
+    },
+    {
+      "resolution": 128,
+      "resnet50_weight": 0.0,
+      "validation_accuracy": 0.6916299559471366
+    },
+    {
+      "resolution": 128,
+      "resnet50_weight": 0.25,
+      "validation_accuracy": 0.694273127753304
+    },
+    {
+      "resolution": 128,
+      "resnet50_weight": 0.5,
+      "validation_accuracy": 0.6859911894273127
+    },
+    {
+      "resolution": 128,
+      "resnet50_weight": 0.75,
+      "validation_accuracy": 0.6651982378854625
+    },
+    {
+      "resolution": 128,
+      "resnet50_weight": 1.0,
+      "validation_accuracy": 0.6468722466960353
+    },
+    {
+      "resolution": 192,
+      "resnet50_weight": 0.0,
+      "validation_accuracy": 0.6916299559471366
+    },
+    {
+      "resolution": 192,
+      "resnet50_weight": 0.25,
+      "validation_accuracy": 0.6958590308370044
+    },
+    {
+      "resolution": 192,
+      "resnet50_weight": 0.5,
+      "validation_accuracy": 0.6930396475770925
+    },
+    {
+      "resolution": 192,
+      "resnet50_weight": 0.75,
+      "validation_accuracy": 0.6688986784140969
+    },
+    {
+      "resolution": 192,
+      "resnet50_weight": 1.0,
+      "validation_accuracy": 0.6468722466960353
+    },
+    {
+      "resolution": 224,
+      "resnet50_weight": 0.0,
+      "validation_accuracy": 0.6916299559471366
+    },
+    {
+      "resolution": 224,
+      "resnet50_weight": 0.25,
+      "validation_accuracy": 0.6926872246696035
+    },
+    {
+      "resolution": 224,
+      "resnet50_weight": 0.5,
+      "validation_accuracy": 0.6905726872246696
+    },
+    {
+      "resolution": 224,
+      "resnet50_weight": 0.75,
+      "validation_accuracy": 0.6452863436123348
+    },
+    {
+      "resolution": 224,
+      "resnet50_weight": 1.0,
+      "validation_accuracy": 0.5873127753303965
+    }
+  ],
+  "selected_resolution_and_weight": {
+    "resolution": 160,
+    "resnet50_weight": 0.25,
+    "validation_accuracy": 0.6995594713656388
+  },
+  "class_frequency_factors": [
+    1.063076285622209,
+    1.3561241455055009,
+    0.9743852551135088,
+    0.917249581781879,
+    0.9364546838662183,
+    0.9140917431192661
+  ],
+  "calibration_validation_scores": {
+    "0.0": 0.6995594713656388,
+    "0.25": 0.7002643171806168,
+    "0.5": 0.6990308370044053,
+    "0.75": 0.6986784140969163,
+    "1.0": 0.6981497797356828
+  },
+  "selected_gamma": 0.25,
+  "submissions": [
+    {
+      "filename": "submission_fer_resnet50_tta_ensemble.csv",
+      "rows": 7065,
+      "sha256": "2631d0c4e3969ab357b9fb9ee7124fc90a4a083870b55d39b36485722c6f9104",
+      "consistency_changes": 18
+    },
+    {
+      "filename": "submission_fer_resnet50_calibrated.csv",
+      "rows": 7065,
+      "sha256": "5b6497a32b1bccb25ab61b8cbc0ec8695de74493d451bfa38b6bf37301c96ed4",
+      "consistency_changes": 18
+    }
+  ],
+  "kaggle_submissions": {
+    "submission_fer_resnet50_calibrated.csv": {
+      "status": "Complete",
+      "public_score": 0.724,
+      "selected_for_final_score": false
+    }
+  }
+}
